@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>亲子 - phpwind - Powered by phpwind</title>
+<meta name="generator" content="phpwind 8.7" />
+<meta name="description" content="phpwind" />
+<meta name="keywords" content="亲子 - phpwind" />
+<base id="headbase" href="http://localhost/phpwind/" />
+<link rel="stylesheet" href="images/pw_core.css?" />
+<link rel="stylesheet" href="mode/area/images/head.css?" />
+<link rel="stylesheet" href="html/channel/baby/images/style.css?" /><script type="text/javascript" src="js/core/core.js"></script>
+<script type="text/javascript" src="js/pw_ajax.js"></script>
+<script>
+var pw_baseurl = "http://localhost/phpwind";
+var imgpath = 'images';
+//var verifyhash = '';
+var modeimg = 'mode/area/images';
+var modeBase = '';
+var winduid = '';
+var windid	= '';
+var groupid	= '';
+var channelid	= '3';
+</script>
+<!--[if IE 9 ]>
+<meta name="msapplication-task" content="name=网站首页; action-uri=http://localhost/phpwind; icon-uri=favicon.ico" />
+<meta name="msapplication-task" content="name=个人中心; action-uri=u.php; icon-uri=images/ico/home.ico" />
+<meta name="msapplication-task" content="name=我的帖子; action-uri=apps.php?q=article; icon-uri=images/ico/post.ico" />
+<meta name="msapplication-task" content="name=消息中心; action-uri=message.php; icon-uri=images/ico/mail.ico" />
+<meta name="msapplication-task" content="name=我的设置; action-uri=profile.php; icon-uri=images/ico/edit.ico" />
+<![endif]-->
+</head>
+<body id="body">
+<div id="top">
+	<div class="top">
+    	<ul>
+            <li><a id="nav_key_up_15" href="http://www.phpwind.com/easysite/index.php" title="" target="_blank">10分钟建站</a></li>
+            <li><a id="nav_key_up_18" href="" title="" >社区服务</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_18">
+<ul class="menuList">
+	<li><a id="nav_key_up_19" href="hack.php?H_name=bank" title="" >银行</a></li>
+	<li><a id="nav_key_up_24" href="profile.php?action=toolcenter" title="" >道具中心</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_16" href="http://www.phpwind.net/convert.php" title="" target="_blank">轻松转换</a></li>
+            <li><a id="nav_key_up_25" href="sort.php" title="" >统计排行</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_25">
+<ul class="menuList">
+	<li><a id="nav_key_up_26" href="sort.php" title="" >基本信息</a></li>
+	<li><a id="nav_key_up_27" href="sort.php?action=ipstate" title="" >到访IP统计</a></li>
+	<li><a id="nav_key_up_28" href="sort.php?action=team" title="" >管理团队</a></li>
+	<li><a id="nav_key_up_29" href="sort.php?action=admin" title="" >管理统计</a></li>
+	<li><a id="nav_key_up_30" href="sort.php?action=online" title="" >在线会员</a></li>
+	<li><a id="nav_key_up_31" href="sort.php?action=member" title="" >会员排行</a></li>
+	<li><a id="nav_key_up_32" href="sort.php?action=forum" title="" >版块排行</a></li>
+	<li><a id="nav_key_up_33" href="sort.php?action=article" title="" >帖子排行</a></li>
+	<li><a id="nav_key_up_34" href="link.php?action=taglist" title="" >标签排行</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_17" href="http://www.phpwind.net/thread-htm-fid-125.html" title="" target="_blank">站长大会</a></li>
+            <li><a id="nav_key_up_35" href="faq.php" title="" >帮助</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+function updateCache(alias){
+	var url = 'mode.php?m=area&q=static&alias='+alias;
+	ajax.send(url,'',ajax.get);
+}
+</script>
+<div id="header">
+	<div id="head" class="cc">
+		<a href="http://localhost/phpwind" class="fl"><img src="images/wind/logo.png" class="fl" title="phpwind" /></a>
+		<script type="text/javascript" src="mode.php?m=area&q=header&ifactive=&alias=baby&t=1331800459"></script>
+ </div>
+	<div class="nav_wrap">
+		<div id="navA">
+<div class="navAL fl">&nbsp;</div>
+        	<div class="navAR fr">&nbsp;</div>
+<div class="navA">
+	<div id="td_mymenu">快捷通道</div>
+	<div id="menu_mymenu" style="display:none;">
+	<div id="fast_menu" class="pw_menu">
+		<ul class="menuList cc">
+<li><a href="apps.php?q=article"><img src="u/images/icon/posts.png" alt="帖子" />帖子</a></li>
+<li><a href="apps.php?q=medal"><img src="u/images/icon/medal.png" alt="勋章" />勋章</a></li>
+<li><a href="u.php?a=friend"><img src="u/images/icon/friend.png" alt="关注" />关注</a></li>
+<li><a href="jobcenter.php"><img src="u/images/icon/jobcenter.png" alt="任务" />任务</a></li>
+		</ul>
+	</div>
+	</div>
+	<ul class="cc">
+		<li class="current"  onmouseover="tmpHideAllCross('nav_key_sub_2');"><a id="nav_key_up_2" href="index.php?m=area" title="" >门户</a></li>
+		<li><a id="nav_key_up_1" href="index.php?m=bbs" title="" >论坛</a></li>
+		<li><a id="nav_key_up_9" href="html/channel/tucool" title="" >图酷</a></li>
+		<li><a id="nav_key_up_3" href="index.php?m=cms" title="" >资讯</a></li>
+		<li><a id="nav_key_up_10" href="group.php" title="" >群组</a></li>
+	</ul>
+</div>
+        </div>
+        <div id="navB" class="pr">
+<div class="navB">
+	<div class="navBbg">
+                <ul class="menuListC cc"><li><a id="nav_key_up_5" href="html/channel/baby" title="" >亲子</a></li><li><a id="nav_key_up_6" href="html/channel/delicious" title="" >美食</a></li><li><a id="nav_key_up_7" href="html/channel/auto" title="" >汽车</a></li><li><a id="nav_key_up_8" href="html/channel/decoration" title="" >家装</a></li></ul>
+	</div>
+            </div>
+		</div>
+<script>
+var timeoutSpecifyId = {};
+
+function tmpClose(elementId) {
+	timeoutSpecifyId[elementId] = setTimeout(function() {
+		getObj(elementId).style.display = 'none';
+	}, 100);
+}
+function tmpHideAllCross(currentSubMenuId) {
+	var elements = getElementsByClassName('navB', getObj('navB'));
+	for (i=0; i<elements.length; i++) {
+		if (elements[i].id != '' && elements[i].id != currentSubMenuId) elements[i].style.display = 'none';
+	}
+}
+
+function ctrlSubMenu(parentId, subMenuId) {
+	clearTimeout(timeoutSpecifyId[subMenuId]);
+
+	tmpHideAllCross(subMenuId);
+	getObj(subMenuId).style.display = '';
+
+	getObj(parentId).onmouseout = function() {
+		tmpClose(subMenuId);
+		getObj(parentId).onmouseout = '';
+	};
+	getObj(subMenuId).onmouseout = function() {
+		tmpClose(subMenuId);
+	};
+	getObj(subMenuId).onmouseover = function() {
+		clearTimeout(timeoutSpecifyId[subMenuId]);
+		getObj(subMenuId).style.display = '';
+	};
+}
+</script>
+     </div>
+	<div id="searchA">
+    	<div class="searchA_right fr">&nbsp;</div>
+        <div class="searchA cc">
+        	<form action="searcher.php" method="post" onSubmit="return searchCheck(this);">
+	        	<input type="hidden" value="" name="verify">
+	            <input value="2" type="hidden" name="step">
+	            <input value="thread" type="hidden" id="search_type" name="type">
+	            <div class="ip"><input id="search_input" type="text" value="搜索其实很简单！" class="gray" name="keyword" onFocus="searchFocus(this)" onBlur="searchBlur(this)" /></div>
+	            <div class="s_select" onMouseOut="this.firstChild.style.display='none';" onMouseOver="this.firstChild.style.display='block';"><ul onClick="getSearchType(event)"><li type="thread" style="display:none">帖子</li><li type="user" >用户</li><li type="forum" >版块</li></ul><h6>帖子</h6></div>
+	            <button type="submit" class="cp fl">搜索</button>
+            </form>
+            <div class="s_tags">
+            <span>热搜：</span>
+                	<a href="searcher.php?keyword=结婚&type=thread">结婚</a>
+                	<a href="searcher.php?keyword=母婴&type=thread">母婴</a>
+                	<a href="searcher.php?keyword=phpwind&type=thread">phpwind</a>
+            </div>
+        </div>
+    </div>
+<script>
+function searchCheck(o) {
+	getVerify(o);
+	return searchInput();
+}
+
+function getVerify(o) {
+	o.verify.value = verifyhash;
+	return true;
+}
+</script>
+</div><div id="main">
+<div id="baby">
+	<ul class="babyNav" id="tabmenu_B">
+		<div class="view-hover" invokename="A1_头部栏目导航@亲子" altname="A1_头部栏目导航@亲子" channelid="baby"><li class="switchNavItem"><a href="" target="_blank" >准妈俱乐部</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >亲子俱乐部</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >无敌宝宝秀</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >试用体验</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >母婴用品</a></li>
+
+
+
+
+</div>
+	</ul>
+	<div id="babyCon">
+		<div class="view-hover" invokename="A2_头部头条@亲子" altname="A2_头部头条@亲子" channelid="baby"><div class="tops"></div><ul></ul>
+
+
+
+
+</div>
+	</div>
+	<div id="babyBottom">
+		<div class="view-hover" invokename="A3_头部通知和入口@亲子" altname="A3_头部通知和入口@亲子" channelid="baby"><ul></ul><dl>
+	<dt>获奖通知:</dt>
+	<dd></dd>
+</dl>
+
+
+
+
+</div>
+	</div>
+</div>
+<div class="cc">
+	<div class="sidebar">
+		<div class="view-hover" invokename="B1_播放器@亲子" altname="B1_播放器@亲子" channelid="baby"><div id="pwSlidePlayer" class="pwSlide" onmouseover="pwSlidePlayer('pause');" onmouseout="pwSlidePlayer('goon');"><div id="Switch_0" >
+<a href="" target="_blank" ><img class="pwSlideFilter" src="images/nopic.gif" width="302" height="252"/><h3></h3></a>
+		</div><span class="pwSlide-bg"></span>
+	<ul id="SwitchNav" class="SwitchNav"></ul>
+</div>
+<div class="c"></div>
+<script type="text/javascript" src="js/picplayer.js"></script>
+<script type="text/javascript">pwSlidePlayer('play',1);</script>
+
+
+
+
+
+</div>
+		<div class="sideTop"></div>
+		<div class="view-hover" invokename="B2_左侧标题@亲子" altname="B2_左侧标题@亲子" channelid="baby"><h2 class="sideTitle"><strong>免费</strong>试用火热进行中</h2>
+
+
+
+
+</div>
+		<div class="sideMid"></div>
+		<div class="sideBox">
+<div class="view-hover" invokename="B3_左侧图文1@亲子" altname="B3_左侧图文1@亲子" channelid="baby"><ul class="list2"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="88" height="88" class="fl" /></a>
+<h4><a href=""  target="_blank" ><em class="hot"><img src="mode/area/themes/baby/images/hot.png" /></em></a></h4>
+<p></p>
+<p><a class="apply" href="">马上申请</a></p>
+		</li></ul>
+
+
+
+
+</div>
+<div class="view-hover" invokename="B4_左侧列表@亲子" altname="B4_左侧列表@亲子" channelid="baby"><ul class="list3"></ul>
+
+
+
+
+</div>
+		</div>
+		<div class="sideMid"></div>
+		<div class="view-hover" invokename="B5_左侧图文2@亲子" altname="B5_左侧图文2@亲子" channelid="baby"><div class="sideBox">
+	<h3><strong>试用</strong>达人</h3><ul class="list4"><li><a href="" target="_blank"><img src="images/nopic.gif" width="57" height="57" class="fl" /></a>
+	<h4><a href=""  target="_blank"></a></h4>
+	<p>..<a href=""  target="_blank">[详情]</a></p>
+</li></ul>
+</div>
+
+
+
+
+</div> 
+		<div class="sideBottom"></div>
+		<div class="view-hover" invokename="B6_左侧广告@亲子" altname="B6_左侧广告@亲子" channelid="baby"><div class="mt10"><a href="#" target="_blank"><img src="mode/area/themes/baby/images/temp/ad302x65.png" width="302" height="65" /></a></div>
+<div class="mt10"><a href="#" target="_blank"><img src="mode/area/themes/baby/images/temp/ad302x65.png" width="302" height="65" /></a></div>
+
+
+
+
+</div>
+	</div>
+	<div class="main">
+		<div class="fl w415">
+<div class="view-hover" invokename="B7_中间摘要@亲子" altname="B7_中间摘要@亲子" channelid="baby"><ul class="tops"></ul>
+
+
+
+
+</div>
+<div class="view-hover" invokename="B8_中间列表@亲子" altname="B8_中间列表@亲子" channelid="baby"><ul class="list1 cc"></ul>
+
+
+</div>
+		</div>
+		<div class="fr w222">
+<div id="tools" class="panel1">
+	<!--pw id="B9_实用工具箱@亲子" /-->
+	<div class="hd"><h3>实用工具箱</h3></div>
+	<div class="bd">
+		<dl class="open">
+<dt class="cc" id="tabwrap1_B">
+	<div class="view-hover" invokename="B9_右侧tab@亲子" altname="B9_右侧tab@亲子" channelid="baby">	<span class="switchNavItem"><a href="">妈妈</a></span>
+	<span class="switchNavItem"><a href="">宝宝</a></span>
+
+	
+</div>
+</dt>
+<dd  id="tabwrap1_A">
+<div class="view-hover" invokename="B10_右侧tab内容1@亲子" altname="B10_右侧tab内容1@亲子" channelid="baby">	<p class="switchItem" style="display:none"></p>
+
+
+</div>
+<div class="view-hover" invokename="B11_右侧tab内容2@亲子" altname="B11_右侧tab内容2@亲子" channelid="baby">	<p class="switchItem" style="display:none"></p>
+
+<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+
+
+</div>
+</dd>
+		</dl>
+	</div>
+	<script>ddSliderPlayers('tabwrap1_A','tabwrap1_B',0,'current');</script>
+</div>
+<div class="mt10">
+	<div class="view-hover" invokename="B12_右侧广告@亲子" altname="B12_右侧广告@亲子" channelid="baby"><a href="#"><img src="mode/area/themes/baby/images/temp/ad222x160.png" /></a>
+
+
+
+
+</div>
+</div>
+		</div>
+		<div class="c"></div>
+		<div class="cc mt10">
+<div class="view-hover" invokename="B12_中间广告1@亲子" altname="B12_中间广告1@亲子" channelid="baby"><a href="#"><img class="fl mr10" src="mode/area/themes/baby/images/temp/ad202x65.png" /></a> <a href="#"><img class="fl" src="mode/area/themes/baby/images/temp/ad202x65.png" /></a> <a href="#"><img class="fr" src="mode/area/themes/baby/images/temp/ad222x65.png" /></a>
+
+
+
+
+</div>
+		</div>
+		<div id="panelA" class="panel1 mt10">
+<div class="view-hover" invokename="B13_左侧图文1@亲子" altname="B13_左侧图文1@亲子" channelid="baby"><div class="hd"></div>
+<div class="bd">
+	<div class="bdWrap cc" style="padding:11px 14px 10px;">
+		<div class="fl subject1"><div class="top1"><a href="" ><img src="images/nopic.gif" width="105" height="80"/></a>
+		<h4><a href=""  target="_blank"></a></h4>
+		<p></p></div><ul></ul>
+		</div>
+		<div class="fr subject1"><div class="top1"><a href="" ><img src="images/nopic.gif" width="105" height="80"/></a>
+		<h4><a href=""  target="_blank"></a></h4>
+		<p></p></div><ul></ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div class="mt10">
+<div class="view-hover" invokename="B14_中间广告2@亲子" altname="B14_中间广告2@亲子" channelid="baby"><a href="#"><img src="mode/area/themes/baby/images/temp/ad648x65.png" /></a>
+
+
+
+
+</div>
+		</div>
+		<div id="panelB" class="panel1 mt10">
+<div class="view-hover" invokename="B15_左侧图文2@亲子" altname="B15_左侧图文2@亲子" channelid="baby"><div class="hd">
+	<h3>Color Baby</h3>
+</div>
+<div class="bd">
+	<div class="bdWrap">
+		<div id="babys"><div id="babyShow"><a href=""  target="_blank" ><img src="images/nopic.gif" width="295" height="170" /></a></div><ul id="babyList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="48" height="48" /></a></li></ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div id="panelC" class="panel1 mt10">
+<div class="view-hover" invokename="B16_左侧图文3@亲子" altname="B16_左侧图文3@亲子" channelid="baby"><div class="hd"></div>
+<div class="bd"><div class="bdWrap cc"><div id="pwSlide2" class="pwSlide">
+<ul class="switch">
+	<li>
+		<a href=""  target="_blank" ><img  src="images/nopic.gif" width="295" height="170"  />
+<h3></h3>
+		</a></li>
+</ul>
+<div class="pwSlide-bg" style="background-color:#C06"></div>
+		</div>
+		<div id="babyBirthday">
+	<p><span>ＩＤ：</span><a href="" target="_blank" class="wish">给宝宝送祝福</a><br />
+		宝宝名字：<strong></strong></p>
+	<p></p>
+		</div></div>
+</div>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div class="brand cc mt10">
+	<div class="view-hover" invokename="B17_横幅广告@亲子" altname="B17_横幅广告@亲子" channelid="baby"><h3>品牌专区</h3>
+<ul class="brandList">
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/firmus.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/beingmate.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/happyprince.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/nestle.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/wissun.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/xianzhi.png" /></a></li>
+</ul>
+
+
+
+
+</div>
+</div>
+<div id="pregnancy" class="panel2 mt10">
+	<div class="view-hover" invokename="C1_栏目导航@亲子" altname="C1_栏目导航@亲子" channelid="baby"><h1 class="caption">孕育新生命</h1>
+<div class="hd">
+	<h3>准妈俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>准备怀孕：</em><a href="#">叶酸</a></li>
+		<li><em>孕早期：</em><a href="#">建卡</a>｜<a href="#">胎教</a></li>
+		<li><em>孕中期：</em><a href="#">B超</a>｜<a href="#">孕检</a></li>
+		<li><em>孕晚期：</em><a href="#">妊娠纹</a>｜<a href="#">胎动</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+<div class="view-hover" invokename="C2_中间图文@亲子" altname="C2_中间图文@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide"><ul class="switch"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="235" height="150" />
+	<h3></h3>
+	</a></li></ul>
+		<div class="pwSlide-bg" style="background-color:#030"></div>
+	</div>
+</div><ul class="tops"></ul>
+
+
+
+
+</div>
+<div class="c"></div>
+<div class="view-hover" invokename="C3_中间列表@亲子" altname="C3_中间列表@亲子" channelid="baby"><div class="steps">
+	<ol>
+		<li class="item"><em>1</em><a href="#">准备怀孕</a><ul class="list5"></ul>
+		</li>
+		<li class="item"><em>2</em><a href="#">孕前期</a><ul class="list5"></ul>
+		</li>
+		<li class="item"><em>3</em><a href="#">孕中期</a><ul class="list5"></ul>
+		</li>
+		<li class="item"><em>4</em><a href="#">孕后期</a><ul class="list5"></ul>
+		</li>
+	</ol>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div class="fr w195">
+		<h4>好孕在线课堂</h4>
+<div class="view-hover" invokename="C4_左侧列表@亲子" altname="C4_左侧列表@亲子" channelid="baby"><ol class="rankingList"></ol>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div id="childhoot" class="panel2 mt10">
+	<div class="view-hover" invokename="D1_栏目导航@亲子" altname="D1_栏目导航@亲子" channelid="baby"><h1 class="caption">幼儿期 [0月-3岁]</h1>
+<div class="hd">
+	<h3>亲子俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>新生儿：</em><a href="#">母乳</a>｜<a href="#">起名</a></li>
+		<li><em>婴儿期：</em><a href="#">辅食</a>｜<a href="#">补钙</a></li>
+		<li><em>幼儿期：</em><a href="#">早教</a>｜<a href="#">感冒</a></li>
+		<li><em>孕晚期：</em><a href="#">妊娠纹</a>｜<a href="#">胎动</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+<div class="view-hover" invokename="D2_中间图文摘要@亲子" altname="D2_中间图文摘要@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide"><ul class="switch"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="235" height="150" />
+	<h3></h3>
+	</a></li></ul>
+		<div class="pwSlide-bg" style="background-color:#F30"></div>
+	</div>
+</div><ul class="tops"></ul>
+
+
+
+
+</div>
+<div class="c"></div>
+<div class="subjectWrap cc">
+	<div class="view-hover" invokename="D3_中间图文列表@亲子" altname="D3_中间图文列表@亲子" channelid="baby"><div class="fl subject2"><a href=""  target="_blank" ><img src="images/nopic.gif" width="75" height="70" /></a><ul class="list5"></ul>
+</div><div class="fr subject2"><a href=""  target="_blank" ><img src="images/nopic.gif" width="75" height="70" /></a><ul class="list5"></ul>
+</div>
+
+
+
+
+</div>
+</div>
+		</div>
+		<div class="fr w195">
+		<h4>盖楼宝宝</h4>
+<div class="view-hover" invokename="D4_右侧图文@亲子" altname="D4_右侧图文@亲子" channelid="baby"><ul class="subject3"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="45" height="40"  /></a></li></ul>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div id="preschool" class="panel2 mt10">
+	<div class="view-hover" invokename="E1_栏目导航@亲子" altname="E1_栏目导航@亲子" channelid="baby"><h1 class="caption">学龄前 [3岁-6岁]</h1>
+<div class="hd">
+	<h3>亲子俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>学龄前：</em><a href="#">培养</a>｜<a href="#">艺术</a>｜<a href="#">兴趣班</a>｜<a href="#">幼儿园</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+<div class="view-hover" invokename="E2_中间图文摘要@亲子" altname="E2_中间图文摘要@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide"><ul class="switch"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="235" height="150" />
+	<h3></h3>
+	</a></li></ul>
+		<div class="pwSlide-bg" style="background-color:#603"></div>
+	</div>
+</div><ul class="tops"></ul>
+
+
+
+
+</div>
+<div class="c"></div>
+<div class="subjectWrap cc">
+	<div class="view-hover" invokename="E3_中间图文列表@亲子" altname="E3_中间图文列表@亲子" channelid="baby"><ul class="imgList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="70" height="65" /></a></li></ul><ul class="list5"></ul>
+
+
+
+
+</div>
+</div>
+		</div>
+		<div class="fr w195">
+		<h4>好孕在线课堂</h4>
+<div class="view-hover" invokename="E4_右侧列表@亲子" altname="E4_右侧列表@亲子" channelid="baby"><ol class="rankingList r2"></ol>
+</div>
+		</div>
+	</div>
+</div></div>
+<div class="footer-wrap">
+<div class="c"></div>
+<div id="bottom"></div>
+<div id="footer">
+	<div class="mb5">
+	<div class="bottom tac">
+<span class="mr10"><a id="nav_key_up_12" href="sendemail.php" title="" >联系我们</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_13" href="simple/" title="" >无图版</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_14" href="m/introduce.php" title="" >手机浏览</a></span><span class="gray mr10">|</span><a href="job.php?action=erasecookie&verify=" rel="nofollow">清除Cookies</a>
+	</div>
+	</div>
+	<div class="f10 s6 tac">
+		<p class="mb5" id="footInfo">Powered by <a href="http://www.phpwind.net/" target="_blank" class="s4">phpwind v8.7</a>&nbsp;<a href="http://www.phpwind.com/certificate.php?host=localhost" target="_blank" rel="nofollow">Certificate</a> Copyright<br /> &copy;2003-2011 <a href="http://localhost/phpwind/" target="_blank">phpwind</a> 版权所有 <a href="http://www.miibeian.gov.cn" target="_blank"></a>  <span id="stats"></span>
+		</p>
+<script type="text/javascript" src="js/global.js"></script>
+<img height="0" width="0" src="mode.php?m=area&q=static&type=autostatic&alias=baby" />
+	</div>
+</div></div>
+</body></html>
+<script>
+var openmenu = {'td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu'};
+window.onReady(function(){
+	read.InitMenu();
+	//消息提示
+	new messageTip(90).init();
+});
+</script>
+

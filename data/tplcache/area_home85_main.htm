@@ -1,0 +1,542 @@
+<!--<?php
+print <<<EOT
+-->
+EOT;
+require modeEot('header');
+print <<<EOT
+<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>	
+	<div class="p83_960"><div class="view-hover" invokename="L9894homeP83@首页" altname="L9894homeP83@首页" channelid="home85">				<a href="" target="_blank"><img src="$channelImagePath/p83_temp_1.jpg" /></a>
+
+
+
+
+</div></div>
+	<div class="p83_960">
+		<div class="p83_gridA">
+			<div class="p83_picPlayer fl mb10 clB"><div class="view-hover" invokename="L6664homeP83@首页" altname="L6664homeP83@首页" channelid="home85">			<div class="pwSlideWrap">
+			 <div id="pwSlidePlayer" class="pwSlide">
+EOT;
+$pwresult = pwTplGetData('L6664homeP83@首页','图片');
+print <<<EOT
+<ul class="switch" id="PP1_A">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="switchItem" style="display:"><a href="$val[url]" target="_blank"><img src="$val[image]" width="270" height="270" /><h3>$val[title]</h3></a></li>
+EOT;
+}print <<<EOT
+</ul>
+				<div class="pwSlide-bg"></div>
+				<ul class="SwitchNav" id="PP1_B">
+EOT;
+for($i = 1; $i<=$key+1; $i++){
+print <<<EOT
+<li class="switchNavItem"><a href="#" onclick="return false;">{$i}</a></li>
+EOT;
+}
+print <<<EOT
+</ul>
+			</div>
+			</div>
+		<script>onReady(function(){ddSliderPlayers('PP1_A','PP1_B',4,'current');})</script>
+
+			
+
+
+</div>
+			</div>
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3B"><div class="view-hover" invokename="K6968homeP83@首页" altname="K6968homeP83@首页" channelid="home85">				生活参考
+
+
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="O7973homeP83@首页" altname="O7973homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('O7973homeP83@首页','配图标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<dl class="p83_dlA clB cc mb5">
+							<dd class="p83_dlA_p"> <a href="$val[url]"  target="_blank" title="$val[title]"><img src="$val[image]" width="80" height="80"  /></a> </dd>
+							<dt class="p83_dlA_t f14 b"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcA">$val[title]</a></dt>
+							<dd class="p83_dlA_c"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcB" >$val[descrip]</a></dd>
+						</dl>
+EOT;
+}print <<<EOT
+</div>
+				<div class="view-hover" invokename="G8597homeP83@首页" altname="G8597homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('G8597homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA p83_ulE">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" title="$val[title]">$val[forumname] <span class="gray">|</span> $val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		
+
+
+
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="p83_gridB">
+			<div class="cc p83_bdA">
+			<span class="tag_hot">热点</span>
+			<div class="view-hover" invokename="G9393homeP83@首页" altname="G9393homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('G9393homeP83@首页','热点标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<dl class="p83_dlB clB">
+EOT;
+$count = $key+1;
+print <<<EOT
+<dt><a href="$val[url]"  target="_blank" title="$val[title]" class="b p83_fcC_$count cc">$val[title]</a></dt>
+		<dd><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcB">$val[descrip]&#46;&#46;.</a><a href="$val[url]" class="p83_fcC" target="_blank" title="$val[title]">[详细]</a></dd>
+	</dl>
+EOT;
+}print <<<EOT
+</div>
+			<div class="view-hover" invokename="P5921homeP83@首页" altname="P5921homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('P5921homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA cc">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="f14"><a href="$val[forumurl]"  target="_blank" title="$val[title]">$val[forumname]</a> <span class="gray"> | </span> <a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		
+
+
+
+</div>
+			</div>
+		</div>
+		<div class="p83_gridC">
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3A"><div class="view-hover" invokename="Q3054homeP83@首页" altname="Q3054homeP83@首页" channelid="home85">	热点话题
+
+
+</div></h3>
+				<div class="p83_box clB mb10">
+				<div class="view-hover" invokename="X1554homeP83@首页" altname="X1554homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('X1554homeP83@首页','突出标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h5 class="p83_box_h5 clB"><a class="f14 p83_fcD b"  href="$val[url]">$val[title]</a></h5>
+EOT;
+}
+$pwresult = pwTplGetData('X1554homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]" class="f14" target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+
+
+</div>
+				</div>
+			</div>
+			<div class="clB cc mb10">
+			<div class="view-hover" invokename="T6737homeP83@首页" altname="T6737homeP83@首页" channelid="home85">					<a href="{url}"  target="_blank" title="{title}"><img src="$channelImagePath/p83_temp_2.jpg" class="fl" /></a>
+
+</div>
+			</div>
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3A"><div class="view-hover" invokename="W7964homeP83@首页" altname="W7964homeP83@首页" channelid="home85">		热门信息
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="Y201homeP83@首页" altname="Y201homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('Y201homeP83@首页','突出标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h5 class="p83_box_h5 mb5 clB"><a class="f14 p83_fcD b"  href="$val[url]">$val[title]</a></h5>
+EOT;
+}
+$pwresult = pwTplGetData('Y201homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+	
+
+
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="p83_960"><div class="view-hover" invokename="I8171homeP83@首页" altname="I8171homeP83@首页" channelid="home85">					<a href="{url}"  target="_blank" title="{title}"><img src="$channelImagePath/p83_temp_3.jpg" /></a>
+					
+					
+
+
+</div></div>
+	<div class="p83_960">
+		<div class="p83_gridA">
+			<div class="p83_mdA clB mb10">
+				<h3 class="p83_h3 p83_h3B"><div class="view-hover" invokename="V7942homeP83@首页" altname="V7942homeP83@首页" channelid="home85">	精彩活动
+
+
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="V5880homeP83@首页" altname="V5880homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('V5880homeP83@首页','配图标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<dl class="p83_dlC clB cc">
+	<dt class="p83_dlC_t"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcA">$val[title]</a></dt>
+	<dd class="p83_dlC_p"><a href="$val[url]"  target="_blank" title="$val[title]"><img src="$val[image]" width="80" height="55"  /></a> </dd>
+	<dd class="p83_dlC_c"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcB" >$val[descrip]</a></dd>
+</dl>
+EOT;
+}print <<<EOT
+</div>
+				</div>
+			</div>
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3C"><div class="view-hover" invokename="A1787homeP83@首页" altname="A1787homeP83@首页" channelid="home85">	旅游天地
+
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="R2301homeP83@首页" altname="R2301homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('R2301homeP83@首页','标题列表1');
+print <<<EOT
+<ul class="p83_ulA p83_ulG">
+EOT;
+foreach($pwresult as $key=>$val){
+$count = $key+1;
+							$classF = $count==1?'class="b p83_fcA"':'';
+print <<<EOT
+<li><a href="$val[forumurl]" target="_blank" title="$val[title]">$val[forumname]</a> <span class="gray">|</span> <a href="$val[url]" $classf target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+EOT;
+$pwresult = pwTplGetData('R2301homeP83@首页','标题列表2');
+print <<<EOT
+<ul class="p83_ulA has_border f14">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[authorurl]"  target="_blank" title="$val[author]"><span class="gray fr f12">$val[author]</span></a><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+
+
+
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="p83_gridB">
+			<div class="p83_mdA clB mb10">
+				<h3 class="p83_h3 p83_h3C"><div class="view-hover" invokename="T2333homeP83@首页" altname="T2333homeP83@首页" channelid="home85"><span class="fl">家居装修</span>
+<span class="more">
+	<a target="_blank" href="#">图库</a> │ <a target="_blank" href="#">热点</a> │ <a target="_blank" href="#">装修</a>
+</span>
+
+
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="M8847homeP83@首页" altname="M8847homeP83@首页" channelid="home85">					<dl class="p83_dlA clB cc">
+EOT;
+$pwresult = pwTplGetData('M8847homeP83@首页','图片');
+print <<<EOT
+<dd class="p83_dlA_p">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" title="$val[title]"><img  src="$val[image]" width="160" height="105"  /></a>
+EOT;
+}print <<<EOT
+</dd>
+						<dd class="p83_dlA_c">
+EOT;
+$pwresult = pwTplGetData('M8847homeP83@首页','突出标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h5 class="p83_box_h5"><a class="f14 p83_fcD b"  href="$val[url]">$val[title]</a></h5>
+EOT;
+}
+$pwresult = pwTplGetData('M8847homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA p83_ulG">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[forumurl]"  target="_blank" title="$val[title]">$val[forumname]</a> <span class="gray">|</span> <a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+						</dd>
+					</dl>
+				
+
+
+</div>
+				<div class="view-hover" invokename="Y3833homeP83@首页" altname="Y3833homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('Y3833homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA f14">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[authorurl]"  target="_blank" title="$val[author]"><span class="gray fr f12">$val[author]</span></a><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+
+
+</div>
+				</div>
+			</div>
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3C"><div class="view-hover" invokename="S7714homeP83@首页" altname="S7714homeP83@首页" channelid="home85"><span class="fl">妈咪宝贝</span>
+<span class="more">
+	<a target="_blank" href="#">亲子</a> │ <a target="_blank" href="#">胎教</a> │ <a target="_blank" href="#">教育</a>
+</span>
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="K9665homeP83@首页" altname="K9665homeP83@首页" channelid="home85">					<dl class="p83_dlA clB cc">
+EOT;
+$pwresult = pwTplGetData('K9665homeP83@首页','图片');
+print <<<EOT
+<dd class="p83_dlA_p">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" title="$val[title]"><img  src="$val[image]" width="160" height="105"  /></a>
+EOT;
+}print <<<EOT
+</dd>
+						<dd class="p83_dlA_c">
+EOT;
+$pwresult = pwTplGetData('K9665homeP83@首页','突出标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h5 class="p83_box_h5"><a class="f14 p83_fcD b"  href="$val[url]">$val[title]</a></h5>
+EOT;
+}
+$pwresult = pwTplGetData('K9665homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA p83_ulG">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[forumurl]"  target="_blank" title="$val[title]">$val[forumname]</a> <span class="gray">|</span> <a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+						</dd>
+					</dl>
+				
+
+
+</div>
+				<div class="view-hover" invokename="I8719homeP83@首页" altname="I8719homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('I8719homeP83@首页','标题列表');
+print <<<EOT
+<ul class="p83_ulA f14">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[authorurl]"  target="_blank" title="$val[author]"><span class="gray fr f12">$val[author]</span></a><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+
+
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="p83_gridC">
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3A"><div class="view-hover" invokename="C9663homeP83@首页" altname="C9663homeP83@首页" channelid="home85">		博客生活
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="E61homeP83@首页" altname="E61homeP83@首页" channelid="home85">
+EOT;
+$pwresult = pwTplGetData('E61homeP83@首页','配图标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<dl class="p83_dlC p83_dlD clB cc">
+	<dt class="p83_dlC_t f14 b"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcA">$val[title]</a></dt>
+	<dd class="p83_dlC_p"><a href="$val[url]"  target="_blank" title="$val[title]"><img src="$val[image]" width="95" height="65"  /></a> </dd>
+	<dd class="p83_dlC_c"><a href="$val[url]"  target="_blank" title="$val[title]" class="p83_fcB" >$val[descrip]</a></dd>
+</dl>
+EOT;
+}print <<<EOT
+</div>
+				</div>
+			</div>
+			<div class="p83_mdA clB">
+				<ul class="tabHolder" id="tabswi1_A">
+					<div class="view-hover" invokename="L9810homeP83@首页" altname="L9810homeP83@首页" channelid="home85">					<li class="switchNavItem"><a href="#">最新帖子</a></li>
+					<li class="switchNavItem"><a href="#">最新回复</a></li>
+					<li class="switchNavItem"><a href="#">热门主题</a></li>
+					
+</div> 
+				</ul>
+				<div id="tabswi1_B" class="p83_box clB mb10">
+					<div class="view-hover" invokename="H8388homeP83@首页" altname="H8388homeP83@首页" channelid="home85">					<div class="switchItem" style="display:none">
+EOT;
+$pwresult = pwTplGetData('H8388homeP83@首页','最新帖子');
+print <<<EOT
+<ol class="p83_olA">
+EOT;
+foreach($pwresult as $key=>$val){
+$count = $key+1;
+print <<<EOT
+<li><a href="$val[url]" target="_blank" title="$val[title]"><em>$count</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+					</div>
+					
+</div> 
+					<div class="view-hover" invokename="I7567homeP83@首页" altname="I7567homeP83@首页" channelid="home85">					<div class="switchItem" style="display:none">
+EOT;
+$pwresult = pwTplGetData('I7567homeP83@首页','最新回复');
+print <<<EOT
+<ol class="p83_olA">
+EOT;
+foreach($pwresult as $key=>$val){
+$count = $key+1;
+print <<<EOT
+<li><a href="$val[url]" target="_blank" title="$val[title]"><em>$count</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+					</div>
+					
+</div> 
+					<div class="view-hover" invokename="D7308homeP83@首页" altname="D7308homeP83@首页" channelid="home85">					<div class="switchItem" style="display:none">
+EOT;
+$pwresult = pwTplGetData('D7308homeP83@首页','热门主题');
+print <<<EOT
+<ol class="p83_olA">
+EOT;
+foreach($pwresult as $key=>$val){
+$count = $key+1;
+print <<<EOT
+<li><a href="$val[url]" target="_blank" title="$val[title]"><em>$count</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+					</div>
+					
+
+
+</div> 
+				</div>
+				<script>onReady(function(){ddSliderPlayers('tabswi1_B','tabswi1_A',0,'current');})</script>
+			</div>
+			<div class="p83_mdA clB">
+				<h3 class="p83_h3 p83_h3A"><div class="view-hover" invokename="D9324homeP83@首页" altname="D9324homeP83@首页" channelid="home85">		互助问答
+
+
+
+</div></h3>
+				<div class="p83_box clB">
+				<div class="view-hover" invokename="R497homeP83@首页" altname="R497homeP83@首页" channelid="home85">
+<dl class="p83_dlC clB cc">
+EOT;
+$pwresult = pwTplGetData('R497homeP83@首页','配图标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<dd class="p83_dlC_p"><a href="$val[url]"  target="_blank" title="$val[title]"><img src="$val[image]" width="80" height="55"  /></a> </dd>
+EOT;
+}print <<<EOT
+<dd class="p83_dlC_c">
+EOT;
+$pwresult = pwTplGetData('R497homeP83@首页','标题列表1');
+print <<<EOT
+<ul class="p83_ulH">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</dd>
+</dl>
+EOT;
+$pwresult = pwTplGetData('R497homeP83@首页','标题列表2');
+print <<<EOT
+<ul class="p83_ulA p83_ulE">
+EOT;
+foreach($pwresult as $key=>$val){
+$count = $key+1;
+							$classF = $count==1?'class="b p83_fcA"':'';
+print <<<EOT
+<li><a href="$val[forumurl]" target="_blank" title="$val[title]">$val[forumname]</a> <span class="gray">|</span> <a href="$val[url]" $classf target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+
+
+
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--
+EOT;
+pwCache::getData(D_P . 'data/bbscache/cache_index.php');
+if($sharelink){print <<<EOT
+-->
+	<div class="p83_960">
+		<div class="clB">
+			<h3 class="p83_h3 p83_h3D"><div class="view-hover" invokename="O5290homep83@首页" altname="O5290homep83@首页" channelid="home85">友情链接
+
+</div></h3>
+
+		<div class="links">
+		<div class="tTable">
+<!--
+EOT;
+foreach($sharelink[0] as $share){ print <<<EOT
+-->
+			$share
+<!--
+EOT;
+}print <<<EOT
+-->
+			<div class="sharelink2 cc">$sharelink[1]</div>
+			</div>
+		</div>
+	</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+EOT;
+require modeEot('footer');
+print <<<EOT
+<!--
+EOT;
+?>-->

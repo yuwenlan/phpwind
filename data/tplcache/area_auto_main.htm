@@ -1,0 +1,986 @@
+<!--<?php
+print <<<EOT
+-->
+EOT;
+require modeEot('header');
+print <<<EOT
+<div id="channelbanner">
+	<h2 class="hidden">汽车频道</h2>
+	<ul id="tabmenu_B">
+		<div class="view-hover" invokename="A2_顶部栏目导航@汽车" altname="A2_顶部栏目导航@汽车" channelid="auto">		<li class="switchNavItem"><a href=""  target="_blank" >驾培中心</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >我要买车</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >杭州车友</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >酷改美容</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >车险百事通</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >车友会</a></li>
+
+</div>
+	</ul>
+</div>
+<div class="cc">
+	<div class="fl mr10 w300">
+		<div class="view-hover" invokename="B1_播放器@汽车" altname="B1_播放器@汽车" channelid="auto">		<div class="pwSlide" id="pwSlidePlayerA" >
+EOT;
+$pwresult = pwTplGetData('B1_播放器@汽车','图片');
+print <<<EOT
+<ul class="switch" id="PP1_A" >
+EOT;
+$count=0;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="switchItem" style="display:"><a href="$val[url]"  target="_blank" > <img src="$val[image]" width="300" height="250" />
+						<h3>$val[title]</h3>
+						</a> </li>
+EOT;
+$count++;
+}print <<<EOT
+</ul>
+			<div class="pwSlide-bg"></div>
+			<ul class="SwitchNav" id="PP1_B">
+EOT;
+if($count){
+for($i = 1; $i<=$count; $i++){
+print <<<EOT
+<li class="switchNavItem"><a href="#" onclick="return false;">{$i}</a></li>
+EOT;
+}
+}
+print <<<EOT
+</ul>
+		</div>
+		<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+		<script>ddSliderPlayers('PP1_A','PP1_B',4,'current');</script>
+		
+</div>
+		<div class="panel mt10">
+			<div class="hd"><div class="view-hover" invokename="B2_左侧标题@汽车" altname="B2_左侧标题@汽车" channelid="auto">
+				<h3>潮流活动志</h3>
+				<a class="more" href="#"  target="_blank" >更多>></a> 
+				
+				
+				
+</div></div>
+			<div class="bd">
+				<div class="view-hover" invokename="B3_左侧内容@汽车" altname="B3_左侧内容@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('B3_左侧内容@汽车','图文列表X3');
+print <<<EOT
+<ul class="subjectList cc" style="padding-bottom:3px; *padding-bottom:13px; _padding-bottom:3px;">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" height="70" width="95" class="fl" /></a>
+						<h4><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+						<p>$val[descrip]</p>
+					</li>
+EOT;
+}print <<<EOT
+</ul>
+				
+</div>
+				<div class="line"></div>
+				<div class="view-hover" invokename="B4_左侧列表@汽车" altname="B4_左侧列表@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('B4_左侧列表@汽车','标题列表X8');
+print <<<EOT
+<ul class="list" style="margin:10px 0 5px;">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><span class="s1">[$val[forumname]]</span>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+</div> </div>
+		</div>
+	</div>
+	<div class="fl w395">
+		<div class="tops">
+			<div class="hd"><h3><div class="view-hover" invokename="B5_今日聚焦标题@汽车" altname="B5_今日聚焦标题@汽车" channelid="auto">
+今日聚焦
+				
+</div></h3></div>
+			<div class="bd"> <div class="view-hover" invokename="B6_今日聚焦头条@汽车" altname="B6_今日聚焦头条@汽车" channelid="auto">	<ul class="top1" style="margin-top:11px;">
+EOT;
+$pwresult = pwTplGetData('B6_今日聚焦头条@汽车','标题摘要X3');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>
+<h2><a class="s1" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+<p>$val[descrip] <a href="$val[url]"  target="_blank"  class="s1">[详情]</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+	
+
+
+
+</div>
+				<div class="line"></div>
+				<div class="view-hover" invokename="B7_今日聚焦列表@汽车" altname="B7_今日聚焦列表@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('B7_今日聚焦列表@汽车','标题列表X12');
+print <<<EOT
+<ul class="list list2Col cc mt10" style="padding-top:3px;padding-bottom:2px">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+</div> </div>
+		</div>
+		<div class="view-hover" invokename="B8_banner@汽车" altname="B8_banner@汽车" channelid="auto"><div class="mt10"><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad395x70.png" width="395" height="70" /></a></div>
+		
+</div>
+		<div class="panel mt10">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="B9_中下标题@汽车" altname="B9_中下标题@汽车" channelid="auto">	汽车情报站
+				
+</div></h3>
+				<ul class="more">
+					<div class="view-hover" invokename="B10_中下右侧文字@汽车" altname="B10_中下右侧文字@汽车" channelid="auto">				
+<li><a href="#"  target="_blank" title="{车讯}">车讯</a> |</li>
+<li><a href="#"  target="_blank" title="{评测}">评测</a> |</li>
+<li><a href="#"  target="_blank" title="{试驾}">试驾</a> |</li>
+<li><a href="#"  target="_blank" title="{导购}">导购</a> |</li>
+<li><a href="#"  target="_blank" title="{咨询}">咨询</a></li>
+				
+</div>
+				</ul>
+			</div>
+			<div class="bd">
+				<div class="subject2 cc"> <div class="view-hover" invokename="B11_中下图文1@汽车" altname="B11_中下图文1@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('B11_中下图文1@汽车','图文列表X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="img"><a href="$val[url]"  target="_blank"  class="s2"><img src="$val[image]" width="95" height="70" />$val[title]</a></div>
+EOT;
+}print <<<EOT
+<ul class="list">
+EOT;
+$pwresult = pwTplGetData('B11_中下图文1@汽车','标题列表X5');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a  href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		
+
+</div> </div>
+				<div class="subject2 mt10 cc"> <div class="view-hover" invokename="B12_中下图文2@汽车" altname="B12_中下图文2@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('B12_中下图文2@汽车','图文列表X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="img"><a href="$val[url]"  target="_blank"  class="s2"><img src="$val[image]" width="95" height="70" />$val[title]</a></div>
+EOT;
+}print <<<EOT
+<ul class="list">
+EOT;
+$pwresult = pwTplGetData('B12_中下图文2@汽车','标题列表X5');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a  href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		
+
+</div> </div>
+			</div>
+		</div>
+	</div>
+	<div class="fr w245">
+		<div id="sideBox_0" class="sideBox"> <div class="view-hover" invokename="B13_顶部右侧广告@汽车" altname="B13_顶部右侧广告@汽车" channelid="auto"><div><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad225x225.png" width="225" height="220" /></a></div>
+
+
+</div>
+			<div class="hd mt10"> <div class="view-hover" invokename="B14_右上标题@汽车" altname="B14_右上标题@汽车" channelid="auto">
+				<h3>新车试驾</h3>
+				<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+			<div class="bd newCar"> <div class="view-hover" invokename="B15_右上列表@汽车" altname="B15_右上列表@汽车" channelid="auto">
+<ul class="list">
+EOT;
+$pwresult = pwTplGetData('B15_右上列表@汽车','标题列表X5');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</div> <div class="view-hover" invokename="B16_右上图片@汽车" altname="B16_右上图片@汽车" channelid="auto">	<ul class="imgList cc">
+EOT;
+$pwresult = pwTplGetData('B16_右上图片@汽车','图片列表X2');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a class="s2" href="$val[url]"  target="_blank" ><img src="$val[image]" width="90" height="70" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+	
+
+</div> </div>
+		</div>
+		<div class="sideBox mt10">
+			<div class="hd"><div class="view-hover" invokename="B17_右下标题@汽车" altname="B17_右下标题@汽车" channelid="auto">
+<h3>新车试驾</h3>
+<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+			<div class="bd"> <div class="view-hover" invokename="B18_右下排行@汽车" altname="B18_右下排行@汽车" channelid="auto">
+<ol class="rankingList">
+EOT;
+$pwresult = pwTplGetData('B18_右下排行@汽车','标题列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+				
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="B19中部banner@汽车" altname="B19中部banner@汽车" channelid="auto">
+<div class="mt10"><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="carBox panel mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="C1_标题@汽车" altname="C1_标题@汽车" channelid="auto">				热销车型推荐
+</div></h3>
+		<ul class="tabHolder" id="tabwrap1_B">
+			<div class="view-hover" invokename="C2_tab@汽车" altname="C2_tab@汽车" channelid="auto"><li class="switchNavItem"><a href="#"  target="_blank">微型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">小型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">紧凑</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">中型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">中大型车</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">豪华车</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">SUV</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">MPV</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">跑车</a></li>
+
+		
+
+</div>
+		</ul>
+	</div>
+	<div class="bd" id="tabwrap1_A">
+	<div class="view-hover" invokename="C3A_tab内容1@汽车" altname="C3A_tab内容1@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3A_tab内容1@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3A_tab内容1@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3A_tab内容1@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3B_tab内容2@汽车" altname="C3B_tab内容2@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3B_tab内容2@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3B_tab内容2@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3B_tab内容2@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3C_tab内容3@汽车" altname="C3C_tab内容3@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3C_tab内容3@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3C_tab内容3@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3C_tab内容3@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3D_tab内容4@汽车" altname="C3D_tab内容4@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3D_tab内容4@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3D_tab内容4@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3D_tab内容4@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3E_tab内容5@汽车" altname="C3E_tab内容5@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3E_tab内容5@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3E_tab内容5@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3E_tab内容5@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3F_tab内容6@汽车" altname="C3F_tab内容6@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3F_tab内容6@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3F_tab内容6@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3F_tab内容6@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3G_tab内容7@汽车" altname="C3G_tab内容7@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3G_tab内容7@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3G_tab内容7@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3G_tab内容7@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+
+</div><div class="view-hover" invokename="C3H_tab内容8@汽车" altname="C3H_tab内容8@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3H_tab内容8@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3H_tab内容8@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3H_tab内容8@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>		
+		
+
+</div><div class="view-hover" invokename="C3I_tab内容9@汽车" altname="C3I_tab内容9@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+			<div class="topCar">
+EOT;
+$pwresult = pwTplGetData('C3I_tab内容9@汽车','特别推荐车');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="pho"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="180" height="120" /></a></div>
+				<h2><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+				<p class="price"><em>经销商报价</em><span class="b s1">$val[descrip]</span></p>
+EOT;
+}
+$pwresult = pwTplGetData('C3I_tab内容9@汽车','特别推荐车描述');
+print <<<EOT
+<ul class="attr">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>$val[title]</li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			<ul class="imgList carList">
+EOT;
+$pwresult = pwTplGetData('C3I_tab内容9@汽车','车图列表X10');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="120" height="90" /></a>
+					<h5><a href="$val[url]"  target="_blank" >$val[title]</a></h5>
+					<p class="s1">$val[descrip]</p>
+				</li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		
+		
+		
+</div>
+	</div>
+	<script>ddSliderPlayers('tabwrap1_A','tabwrap1_B',0,'current');</script>
+</div>
+<div class="view-hover" invokename="C4_banner@汽车" altname="C4_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank" ><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="cc mt10">
+	<div class="fl w705">
+		<div class="carBox panel">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="C5_标题@汽车" altname="C5_标题@汽车" channelid="auto">网友拍车
+</div></h3>
+			</div>
+			<div class="bd" style="padding-right:0; padding-bottom:5px;"> <div class="view-hover" invokename="C6_左侧图文@汽车" altname="C6_左侧图文@汽车" channelid="auto">
+				<ul class="imgList carList2 cc">
+EOT;
+$pwresult = pwTplGetData('C6_左侧图文@汽车','图片列表X8');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a class="s2" href="$val[url]"  target="_blank" ><img src="$val[image]" width="145" height="110" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+</div> </div>
+		</div>
+	</div>
+	<div class="fr w245">
+		<div class="sideBox">
+			<div class="hd"><div class="view-hover" invokename="C7_右侧标题@汽车" altname="C7_右侧标题@汽车" channelid="auto">
+				<h3>精彩专题推荐</h3>
+				<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+			<div class="bd"> <div class="view-hover" invokename="C8_右侧图文@汽车" altname="C8_右侧图文@汽车" channelid="auto">
+				<ol class="topicList">
+EOT;
+$pwresult = pwTplGetData('C8_右侧图文@汽车','图片列表X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="215" height="40" /></a>
+						<h5><em>1</em><a class="s2" href="$val[url]"  target="_blank" >$val[title]</a></h5>
+						</li>
+EOT;
+}print <<<EOT
+</ol>
+				
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="C9_banner@汽车" altname="C9_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank"><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="D1_标题@汽车" altname="D1_标题@汽车" channelid="auto">车友说车
+
+</div></h3>
+		<ul class="more">
+			<div class="view-hover" invokename="D2_文字连接@汽车" altname="D2_文字连接@汽车" channelid="auto">				<li><a href="#"  target="_blank">故障</a> |</li>
+				<li><a href="#"  target="_blank">油耗</a> |</li>
+				<li><a href="#"  target="_blank">驾驶</a> |</li>
+				<li><a href="#"  target="_blank">外观</a> |</li>
+				<li><a href="#"  target="_blank">配置</a> |</li>
+				<li><a href="#"  target="_blank">保养</a></li>
+
+		
+
+</div>
+		</ul>
+	</div>
+	<div class="bd cc">
+		<div class="fl w415 mr20">
+			<div class="subject cc"> <div class="view-hover" invokename="D3_左侧图文@汽车" altname="D3_左侧图文@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('D3_左侧图文@汽车','图文列表X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" ><img class="fl" src="$val[image]" width="140" height="95" /></a>
+				<h4 class="f14 b mb5"><a class="s1" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+				<p>$val[descrip]</p>
+EOT;
+}print <<<EOT
+</div> </div>
+			<div class="line" style="margin-top:10px;"></div>
+			<div class="view-hover" invokename="D4_左侧列表@汽车" altname="D4_左侧列表@汽车" channelid="auto">
+			<ul class="list list2Col cc mt10">
+EOT;
+$pwresult = pwTplGetData('D4_左侧列表@汽车','标题列表X12');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><span class="s1">[$val[forumname]]</span>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			
+</div> </div>
+		<div class="fl w265"> <div class="view-hover" invokename="D5_中间图文@汽车" altname="D5_中间图文@汽车" channelid="auto">
+			<ul class="imgList2">
+EOT;
+$pwresult = pwTplGetData('D5_中间图文@汽车','图文列表X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" class="fl" width="65" height="50" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			
+</div> </div>
+		<div class="fr w225">
+			<div class="subject3">
+				<h4><div class="view-hover" invokename="D6_右侧标题@汽车" altname="D6_右侧标题@汽车" channelid="auto">新手作业
+</div></h4>
+				<div class="topOne mb5"><div class="view-hover" invokename="D7_右侧图文@汽车" altname="D7_右侧图文@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('D7_右侧图文@汽车','图文列表X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<a class="pr" href="$val[url]"  target="_blank" ><img src="$val[image]" width="215" height="75" />
+						<p>$val[title]</p>
+						<i></i></a>
+EOT;
+}print <<<EOT
+</div> </div>
+				<div class="view-hover" invokename="D8_右侧列表@汽车" altname="D8_右侧列表@汽车" channelid="auto">
+				<ul class="list">
+EOT;
+$pwresult = pwTplGetData('D8_右侧列表@汽车','标题列表X7');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="E1_标题@汽车" altname="E1_标题@汽车" channelid="auto">人 · 车 · 生活
+
+</div></h3>
+		<ul class="more">
+			<div class="view-hover" invokename="E2_文字连接@汽车" altname="E2_文字连接@汽车" channelid="auto">
+			<li><a href="#"  target="_blank">社区</a> |</li>
+			<li><a href="#"  target="_blank">活动</a> |</li>
+			<li><a href="#"  target="_blank">八卦</a></li>
+			
+
+</div>
+		</ul>
+	</div>
+	<div class="bd cc">
+		<div id="pwSlidePlayer_1" class="pwSlide fl mr10"> <div class="view-hover" invokename="E3_播放器@汽车" altname="E3_播放器@汽车" channelid="auto">			<ul class="switch" id="pp2_A">
+EOT;
+$pwresult = pwTplGetData('E3_播放器@汽车','图片');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="switchItem" style="display:none"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="325" height="210" />
+					<h3>$val[title]</h3>
+					</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			<div class="pwSlide-bg"></div>
+			<ul class="SwitchNav"  id="pp2_B">
+EOT;
+for($i = 1; $i<=$key+1; $i++){
+print <<<EOT
+<li class="switchNavItem"><a href="#" onclick="return false;">{$i}</a></li>
+EOT;
+}
+print <<<EOT
+</ul>
+			<script>ddSliderPlayers('pp2_A','pp2_B',4,'current');</script>
+		
+</div> </div>
+		<div class="subject4">
+			<div class="top1"> <div class="view-hover" invokename="E4_中间摘要@汽车" altname="E4_中间摘要@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('E4_中间摘要@汽车','标题摘要X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h2><a class="s1" href="$val[url]"  target="_blank" >$val[title]</a></h2>
+	<p class="gray">$val[descrip]</p>
+EOT;
+}print <<<EOT
+</div> </div>
+			<div class="view-hover" invokename="E5_中间列表@汽车" altname="E5_中间列表@汽车" channelid="auto">
+			<ul class="list list2Col cc">
+EOT;
+$pwresult = pwTplGetData('E5_中间列表@汽车','标题列表X8');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><span class="s1">[$val[forumname]]</span>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			
+
+
+</div> <div class="view-hover" invokename="E6_中间图片@汽车" altname="E6_中间图片@汽车" channelid="auto">
+			<ul class="imgList cc">
+EOT;
+$pwresult = pwTplGetData('E6_中间图片@汽车','图标列表X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="80" height="50" /></a></li>
+EOT;
+}print <<<EOT
+</ul>
+			
+</div> </div>
+		<div class="fr w225">
+			<div class="subject3">
+				<h4><div class="view-hover" invokename="E7_右侧标题@汽车" altname="E7_右侧标题@汽车" channelid="auto">车友活动
+</div></h4>
+				<div class="view-hover" invokename="E8_右侧图文@汽车" altname="E8_右侧图文@汽车" channelid="auto">	<div class="topOne mb5">
+EOT;
+$pwresult = pwTplGetData('E8_右侧图文@汽车','图片X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<a class="pr" href="$val[url]"  target="_blank" ><img src="$val[image]" width="215" height="75" />
+	<p>$val[title]</p>
+	<i></i></a>
+EOT;
+}print <<<EOT
+</div>
+	
+
+
+</div> <div class="view-hover" invokename="E9_右侧列表@汽车" altname="E9_右侧列表@汽车" channelid="auto">
+				<ul class="list">
+EOT;
+$pwresult = pwTplGetData('E9_右侧列表@汽车','标题列表X5');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</span></a></li>
+EOT;
+}print <<<EOT
+</ul>
+				
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="F1_标题@汽车" altname="F1_标题@汽车" channelid="auto">汽车一条龙
+</div></h3>
+		<ul class="more">
+			<div class="view-hover" invokename="F2_文字链接@汽车" altname="F2_文字链接@汽车" channelid="auto">
+			<li><a href="#"  target="_blank">学车</a> |</li>
+			<li><a href="#"  target="_blank">车险</a> |</li>
+			<li><a href="#"  target="_blank">改装</a> |</li>
+			<li><a href="#"  target="_blank">维修保养</a> |</li>
+			<li><a href="#"  target="_blank">驾校咨询</a></li>
+
+		
+</div>
+		</ul>
+	</div>
+	
+	<div class="bd cc">
+		<div class="wrap">
+			<ol class="carSteps">
+				<li class="item"><div class="view-hover" invokename="F3_图文1@汽车" altname="F3_图文1@汽车" channelid="auto">					<h4><em class="stepBg"><span class="sn_01">01</span></em>学车</h4>
+EOT;
+$pwresult = pwTplGetData('F3_图文1@汽车','图片X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="topOne"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="210" height="70" />
+						<p>$val[title]</p>
+						<i></i></a></div>
+EOT;
+}print <<<EOT
+<ul class="list mt10">
+EOT;
+$pwresult = pwTplGetData('F3_图文1@汽车','标题X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+					
+</div> </li>
+				<li class="item"> <div class="view-hover" invokename="F4_图文2@汽车" altname="F4_图文2@汽车" channelid="auto">
+					<h4><em class="stepBg"><span class="sn_02">02</span></em>买车</h4>
+EOT;
+$pwresult = pwTplGetData('F4_图文2@汽车','图片X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="topOne"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="210" height="70" />
+						<p>$val[title]</p>
+						<i></i></a></div>
+EOT;
+}print <<<EOT
+<ul class="list mt10">
+EOT;
+$pwresult = pwTplGetData('F4_图文2@汽车','标题X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+					
+</div> </li>
+				<li class="item"> <div class="view-hover" invokename="F5_图文3@汽车" altname="F5_图文3@汽车" channelid="auto">
+					<h4><em class="stepBg"><span class="sn_03">03</span></em>开车</h4>
+EOT;
+$pwresult = pwTplGetData('F5_图文3@汽车','图片X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="topOne"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="210" height="70" />
+						<p>$val[title]</p>
+						<i></i></a></div>
+EOT;
+}print <<<EOT
+<ul class="list mt10">
+EOT;
+$pwresult = pwTplGetData('F5_图文3@汽车','标题X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+					
+</div> </li>
+				<li class="item"> <div class="view-hover" invokename="F6_图文4@汽车" altname="F6_图文4@汽车" channelid="auto">
+					<h4><em class="stepBg"><span class="sn_04">04</span></em>养车</h4>
+EOT;
+$pwresult = pwTplGetData('F6_图文4@汽车','图片X1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="topOne"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="210" height="70" />
+						<p>$val[title]</p>
+						<i></i></a></div>
+EOT;
+}print <<<EOT
+<ul class="list mt10">
+EOT;
+$pwresult = pwTplGetData('F6_图文4@汽车','标题X4');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+					
+</div> </li>
+			</ol>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="F7_banner@汽车" altname="F7_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank"><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="panel carBox mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="G1_标题@汽车" altname="G1_标题@汽车" channelid="auto">加入车友会
+</div></h3>
+	</div>
+	<div class="bd cc">
+		<ul class="clubList">
+			<div class="view-hover" invokename="G2_左侧列表@汽车" altname="G2_左侧列表@汽车" channelid="auto">
+EOT;
+$pwresult = pwTplGetData('G2_左侧列表@汽车','车友会列表X30');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</div>
+		</ul>
+		<div class="clubBox">
+		<ul class="tabHolder" id="tabwrap2_B"><div class="view-hover" invokename="G3_右侧TAB@汽车" altname="G3_右侧TAB@汽车" channelid="auto">	<li class="switchNavItem"><a href="#"  target="_blank">活动回顾</a></li>
+	<li class="switchNavItem"><a href="#"  target="_blank">近期亮点</a></li>
+
+
+
+
+</div></ul>
+		<div id="tabwrap2_A"><div class="view-hover" invokename="G4A_右侧TAB内容1@汽车" altname="G4A_右侧TAB内容1@汽车" channelid="auto">			<div class="switchItem tabPanel" style="display:none">
+EOT;
+$pwresult = pwTplGetData('G4A_右侧TAB内容1@汽车','图片');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="subject cc"><a href="$val[url]"  target="_blank" ><img class="fl" src="$val[image]" width="85" height="65" /></a>
+					<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+					<p>$val[descrip]</p>
+				</div>
+EOT;
+}
+$pwresult = pwTplGetData('G4A_右侧TAB内容1@汽车','标题列表X8');
+print <<<EOT
+<ul class="list list2Col cc">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【<span class="s1">$val[forumname]</span>】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+
+</div><div class="view-hover" invokename="G4B_右侧TAB内容2@汽车" altname="G4B_右侧TAB内容2@汽车" channelid="auto">			<div class="switchItem tabPanel" style="display:none">
+EOT;
+$pwresult = pwTplGetData('G4B_右侧TAB内容2@汽车','图片');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="subject cc"><a href="$val[url]"  target="_blank" ><img class="fl" src="$val[image]" width="85" height="65" /></a>
+					<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+					<p>$val[descrip]</p>
+				</div>
+EOT;
+}
+$pwresult = pwTplGetData('G4B_右侧TAB内容2@汽车','标题列表X8');
+print <<<EOT
+<ul class="list list2Col cc">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【<span class="s1">$val[forumname]</span>】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+			</div>
+			
+</div></div>
+		<script>ddSliderPlayers('tabwrap2_A','tabwrap2_B',0,'current');</script>
+		</div>
+	</div>
+</div>
+EOT;
+require modeEot('footer');
+print <<<EOT
+<!--
+EOT;
+?>-->

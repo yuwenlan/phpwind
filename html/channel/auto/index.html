@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>汽车 - phpwind - Powered by phpwind</title>
+<meta name="generator" content="phpwind 8.7" />
+<meta name="description" content="phpwind" />
+<meta name="keywords" content="汽车 - phpwind" />
+<base id="headbase" href="http://localhost/phpwind/" />
+<link rel="stylesheet" href="images/pw_core.css?" />
+<link rel="stylesheet" href="mode/area/images/head.css?" />
+<link rel="stylesheet" href="html/channel/auto/images/style.css?" /><script type="text/javascript" src="js/core/core.js"></script>
+<script type="text/javascript" src="js/pw_ajax.js"></script>
+<script>
+var pw_baseurl = "http://localhost/phpwind";
+var imgpath = 'images';
+//var verifyhash = '';
+var modeimg = 'mode/area/images';
+var modeBase = '';
+var winduid = '';
+var windid	= '';
+var groupid	= '';
+var channelid	= '4';
+</script>
+<!--[if IE 9 ]>
+<meta name="msapplication-task" content="name=网站首页; action-uri=http://localhost/phpwind; icon-uri=favicon.ico" />
+<meta name="msapplication-task" content="name=个人中心; action-uri=u.php; icon-uri=images/ico/home.ico" />
+<meta name="msapplication-task" content="name=我的帖子; action-uri=apps.php?q=article; icon-uri=images/ico/post.ico" />
+<meta name="msapplication-task" content="name=消息中心; action-uri=message.php; icon-uri=images/ico/mail.ico" />
+<meta name="msapplication-task" content="name=我的设置; action-uri=profile.php; icon-uri=images/ico/edit.ico" />
+<![endif]-->
+</head>
+<body id="body">
+<div id="top">
+	<div class="top">
+    	<ul>
+            <li><a id="nav_key_up_15" href="http://www.phpwind.com/easysite/index.php" title="" target="_blank">10分钟建站</a></li>
+            <li><a id="nav_key_up_18" href="" title="" >社区服务</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_18">
+<ul class="menuList">
+	<li><a id="nav_key_up_19" href="hack.php?H_name=bank" title="" >银行</a></li>
+	<li><a id="nav_key_up_24" href="profile.php?action=toolcenter" title="" >道具中心</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_16" href="http://www.phpwind.net/convert.php" title="" target="_blank">轻松转换</a></li>
+            <li><a id="nav_key_up_25" href="sort.php" title="" >统计排行</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_25">
+<ul class="menuList">
+	<li><a id="nav_key_up_26" href="sort.php" title="" >基本信息</a></li>
+	<li><a id="nav_key_up_27" href="sort.php?action=ipstate" title="" >到访IP统计</a></li>
+	<li><a id="nav_key_up_28" href="sort.php?action=team" title="" >管理团队</a></li>
+	<li><a id="nav_key_up_29" href="sort.php?action=admin" title="" >管理统计</a></li>
+	<li><a id="nav_key_up_30" href="sort.php?action=online" title="" >在线会员</a></li>
+	<li><a id="nav_key_up_31" href="sort.php?action=member" title="" >会员排行</a></li>
+	<li><a id="nav_key_up_32" href="sort.php?action=forum" title="" >版块排行</a></li>
+	<li><a id="nav_key_up_33" href="sort.php?action=article" title="" >帖子排行</a></li>
+	<li><a id="nav_key_up_34" href="link.php?action=taglist" title="" >标签排行</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_17" href="http://www.phpwind.net/thread-htm-fid-125.html" title="" target="_blank">站长大会</a></li>
+            <li><a id="nav_key_up_35" href="faq.php" title="" >帮助</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+function updateCache(alias){
+	var url = 'mode.php?m=area&q=static&alias='+alias;
+	ajax.send(url,'',ajax.get);
+}
+</script>
+<div id="header">
+	<div id="head" class="cc">
+		<a href="http://localhost/phpwind" class="fl"><img src="images/wind/logo.png" class="fl" title="phpwind" /></a>
+		<script type="text/javascript" src="mode.php?m=area&q=header&ifactive=&alias=auto&t=1331800459"></script>
+ </div>
+	<div class="nav_wrap">
+		<div id="navA">
+<div class="navAL fl">&nbsp;</div>
+        	<div class="navAR fr">&nbsp;</div>
+<div class="navA">
+	<div id="td_mymenu">快捷通道</div>
+	<div id="menu_mymenu" style="display:none;">
+	<div id="fast_menu" class="pw_menu">
+		<ul class="menuList cc">
+<li><a href="apps.php?q=article"><img src="u/images/icon/posts.png" alt="帖子" />帖子</a></li>
+<li><a href="apps.php?q=medal"><img src="u/images/icon/medal.png" alt="勋章" />勋章</a></li>
+<li><a href="u.php?a=friend"><img src="u/images/icon/friend.png" alt="关注" />关注</a></li>
+<li><a href="jobcenter.php"><img src="u/images/icon/jobcenter.png" alt="任务" />任务</a></li>
+		</ul>
+	</div>
+	</div>
+	<ul class="cc">
+		<li class="current"  onmouseover="tmpHideAllCross('nav_key_sub_2');"><a id="nav_key_up_2" href="index.php?m=area" title="" >门户</a></li>
+		<li><a id="nav_key_up_1" href="index.php?m=bbs" title="" >论坛</a></li>
+		<li><a id="nav_key_up_9" href="html/channel/tucool" title="" >图酷</a></li>
+		<li><a id="nav_key_up_3" href="index.php?m=cms" title="" >资讯</a></li>
+		<li><a id="nav_key_up_10" href="group.php" title="" >群组</a></li>
+	</ul>
+</div>
+        </div>
+        <div id="navB" class="pr">
+<div class="navB">
+	<div class="navBbg">
+                <ul class="menuListC cc"><li><a id="nav_key_up_5" href="html/channel/baby" title="" >亲子</a></li><li><a id="nav_key_up_6" href="html/channel/delicious" title="" >美食</a></li><li><a id="nav_key_up_7" href="html/channel/auto" title="" >汽车</a></li><li><a id="nav_key_up_8" href="html/channel/decoration" title="" >家装</a></li></ul>
+	</div>
+            </div>
+		</div>
+<script>
+var timeoutSpecifyId = {};
+
+function tmpClose(elementId) {
+	timeoutSpecifyId[elementId] = setTimeout(function() {
+		getObj(elementId).style.display = 'none';
+	}, 100);
+}
+function tmpHideAllCross(currentSubMenuId) {
+	var elements = getElementsByClassName('navB', getObj('navB'));
+	for (i=0; i<elements.length; i++) {
+		if (elements[i].id != '' && elements[i].id != currentSubMenuId) elements[i].style.display = 'none';
+	}
+}
+
+function ctrlSubMenu(parentId, subMenuId) {
+	clearTimeout(timeoutSpecifyId[subMenuId]);
+
+	tmpHideAllCross(subMenuId);
+	getObj(subMenuId).style.display = '';
+
+	getObj(parentId).onmouseout = function() {
+		tmpClose(subMenuId);
+		getObj(parentId).onmouseout = '';
+	};
+	getObj(subMenuId).onmouseout = function() {
+		tmpClose(subMenuId);
+	};
+	getObj(subMenuId).onmouseover = function() {
+		clearTimeout(timeoutSpecifyId[subMenuId]);
+		getObj(subMenuId).style.display = '';
+	};
+}
+</script>
+     </div>
+	<div id="searchA">
+    	<div class="searchA_right fr">&nbsp;</div>
+        <div class="searchA cc">
+        	<form action="searcher.php" method="post" onSubmit="return searchCheck(this);">
+	        	<input type="hidden" value="" name="verify">
+	            <input value="2" type="hidden" name="step">
+	            <input value="thread" type="hidden" id="search_type" name="type">
+	            <div class="ip"><input id="search_input" type="text" value="搜索其实很简单！" class="gray" name="keyword" onFocus="searchFocus(this)" onBlur="searchBlur(this)" /></div>
+	            <div class="s_select" onMouseOut="this.firstChild.style.display='none';" onMouseOver="this.firstChild.style.display='block';"><ul onClick="getSearchType(event)"><li type="thread" style="display:none">帖子</li><li type="user" >用户</li><li type="forum" >版块</li></ul><h6>帖子</h6></div>
+	            <button type="submit" class="cp fl">搜索</button>
+            </form>
+            <div class="s_tags">
+            <span>热搜：</span>
+                	<a href="searcher.php?keyword=结婚&type=thread">结婚</a>
+                	<a href="searcher.php?keyword=母婴&type=thread">母婴</a>
+                	<a href="searcher.php?keyword=phpwind&type=thread">phpwind</a>
+            </div>
+        </div>
+    </div>
+<script>
+function searchCheck(o) {
+	getVerify(o);
+	return searchInput();
+}
+
+function getVerify(o) {
+	o.verify.value = verifyhash;
+	return true;
+}
+</script>
+</div><div id="main">
+<div id="channelbanner">
+	<h2 class="hidden">汽车频道</h2>
+	<ul id="tabmenu_B">
+		<div class="view-hover" invokename="A2_顶部栏目导航@汽车" altname="A2_顶部栏目导航@汽车" channelid="auto">		<li class="switchNavItem"><a href=""  target="_blank" >驾培中心</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >我要买车</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >杭州车友</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >酷改美容</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >车险百事通</a></li>
+		<li class="switchNavItem"><a href=""  target="_blank" >车友会</a></li>
+
+</div>
+	</ul>
+</div>
+<div class="cc">
+	<div class="fl mr10 w300">
+		<div class="view-hover" invokename="B1_播放器@汽车" altname="B1_播放器@汽车" channelid="auto">		<div class="pwSlide" id="pwSlidePlayerA" ><ul class="switch" id="PP1_A" ><li class="switchItem" style="display:"><a href=""  target="_blank" > <img src="images/nopic.gif" width="300" height="250" />
+<h3></h3>
+</a> </li></ul>
+<div class="pwSlide-bg"></div>
+<ul class="SwitchNav" id="PP1_B"><li class="switchNavItem"><a href="#" onclick="return false;">1</a></li></ul>
+		</div>
+		<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+		<script>ddSliderPlayers('PP1_A','PP1_B',4,'current');</script>
+		
+</div>
+		<div class="panel mt10">
+<div class="hd"><div class="view-hover" invokename="B2_左侧标题@汽车" altname="B2_左侧标题@汽车" channelid="auto">
+	<h3>潮流活动志</h3>
+	<a class="more" href="#"  target="_blank" >更多>></a> 
+	
+	
+	
+</div></div>
+<div class="bd">
+	<div class="view-hover" invokename="B3_左侧内容@汽车" altname="B3_左侧内容@汽车" channelid="auto"><ul class="subjectList cc" style="padding-bottom:3px; *padding-bottom:13px; _padding-bottom:3px;"><li><a href=""  target="_blank" ><img src="images/nopic.gif" height="70" width="95" class="fl" /></a>
+<h4><a class="s2" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+	
+</div>
+	<div class="line"></div>
+	<div class="view-hover" invokename="B4_左侧列表@汽车" altname="B4_左侧列表@汽车" channelid="auto"><ul class="list" style="margin:10px 0 5px;"></ul>
+	
+</div> </div>
+		</div>
+	</div>
+	<div class="fl w395">
+		<div class="tops">
+<div class="hd"><h3><div class="view-hover" invokename="B5_今日聚焦标题@汽车" altname="B5_今日聚焦标题@汽车" channelid="auto">
+今日聚焦
+	
+</div></h3></div>
+<div class="bd"> <div class="view-hover" invokename="B6_今日聚焦头条@汽车" altname="B6_今日聚焦头条@汽车" channelid="auto">	<ul class="top1" style="margin-top:11px;"></ul>
+	
+
+
+
+</div>
+	<div class="line"></div>
+	<div class="view-hover" invokename="B7_今日聚焦列表@汽车" altname="B7_今日聚焦列表@汽车" channelid="auto"><ul class="list list2Col cc mt10" style="padding-top:3px;padding-bottom:2px"></ul>
+
+</div> </div>
+		</div>
+		<div class="view-hover" invokename="B8_banner@汽车" altname="B8_banner@汽车" channelid="auto"><div class="mt10"><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad395x70.png" width="395" height="70" /></a></div>
+		
+</div>
+		<div class="panel mt10">
+<div class="hd">
+	<h3><div class="view-hover" invokename="B9_中下标题@汽车" altname="B9_中下标题@汽车" channelid="auto">	汽车情报站
+	
+</div></h3>
+	<ul class="more">
+		<div class="view-hover" invokename="B10_中下右侧文字@汽车" altname="B10_中下右侧文字@汽车" channelid="auto">	
+<li><a href="#"  target="_blank" title="{车讯}">车讯</a> |</li>
+<li><a href="#"  target="_blank" title="{评测}">评测</a> |</li>
+<li><a href="#"  target="_blank" title="{试驾}">试驾</a> |</li>
+<li><a href="#"  target="_blank" title="{导购}">导购</a> |</li>
+<li><a href="#"  target="_blank" title="{咨询}">咨询</a></li>
+	
+</div>
+	</ul>
+</div>
+<div class="bd">
+	<div class="subject2 cc"> <div class="view-hover" invokename="B11_中下图文1@汽车" altname="B11_中下图文1@汽车" channelid="auto"><div class="img"><a href=""  target="_blank"  class="s2"><img src="images/nopic.gif" width="95" height="70" /></a></div><ul class="list"></ul>
+		
+
+</div> </div>
+	<div class="subject2 mt10 cc"> <div class="view-hover" invokename="B12_中下图文2@汽车" altname="B12_中下图文2@汽车" channelid="auto"><div class="img"><a href=""  target="_blank"  class="s2"><img src="images/nopic.gif" width="95" height="70" /></a></div><ul class="list"></ul>
+		
+
+</div> </div>
+</div>
+		</div>
+	</div>
+	<div class="fr w245">
+		<div id="sideBox_0" class="sideBox"> <div class="view-hover" invokename="B13_顶部右侧广告@汽车" altname="B13_顶部右侧广告@汽车" channelid="auto"><div><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad225x225.png" width="225" height="220" /></a></div>
+
+
+</div>
+<div class="hd mt10"> <div class="view-hover" invokename="B14_右上标题@汽车" altname="B14_右上标题@汽车" channelid="auto">
+	<h3>新车试驾</h3>
+	<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+<div class="bd newCar"> <div class="view-hover" invokename="B15_右上列表@汽车" altname="B15_右上列表@汽车" channelid="auto">
+<ul class="list"></div> <div class="view-hover" invokename="B16_右上图片@汽车" altname="B16_右上图片@汽车" channelid="auto">	<ul class="imgList cc"><li><a class="s2" href=""  target="_blank" ><img src="images/nopic.gif" width="90" height="70" /></a></li></ul>
+	
+
+</div> </div>
+		</div>
+		<div class="sideBox mt10">
+<div class="hd"><div class="view-hover" invokename="B17_右下标题@汽车" altname="B17_右下标题@汽车" channelid="auto">
+<h3>新车试驾</h3>
+<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+<div class="bd"> <div class="view-hover" invokename="B18_右下排行@汽车" altname="B18_右下排行@汽车" channelid="auto">
+<ol class="rankingList"></ol>
+	
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="B19中部banner@汽车" altname="B19中部banner@汽车" channelid="auto">
+<div class="mt10"><a href="{url}"  target="_blank" ><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="carBox panel mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="C1_标题@汽车" altname="C1_标题@汽车" channelid="auto">	热销车型推荐
+</div></h3>
+		<ul class="tabHolder" id="tabwrap1_B">
+<div class="view-hover" invokename="C2_tab@汽车" altname="C2_tab@汽车" channelid="auto"><li class="switchNavItem"><a href="#"  target="_blank">微型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">小型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">紧凑</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">中型</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">中大型车</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">豪华车</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">SUV</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">MPV</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">跑车</a></li>
+
+		
+
+</div>
+		</ul>
+	</div>
+	<div class="bd" id="tabwrap1_A">
+	<div class="view-hover" invokename="C3A_tab内容1@汽车" altname="C3A_tab内容1@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3B_tab内容2@汽车" altname="C3B_tab内容2@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3C_tab内容3@汽车" altname="C3C_tab内容3@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3D_tab内容4@汽车" altname="C3D_tab内容4@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3E_tab内容5@汽车" altname="C3E_tab内容5@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3F_tab内容6@汽车" altname="C3F_tab内容6@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+</div><div class="view-hover" invokename="C3G_tab内容7@汽车" altname="C3G_tab内容7@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+
+</div><div class="view-hover" invokename="C3H_tab内容8@汽车" altname="C3H_tab内容8@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>		
+		
+
+</div><div class="view-hover" invokename="C3I_tab内容9@汽车" altname="C3I_tab内容9@汽车" channelid="auto">		<div class="switchItem tabPanel cc" style="display:none">
+<div class="topCar"><div class="pho"><a href=""  target="_blank" ><img src="images/nopic.gif" width="180" height="120" /></a></div>
+	<h2><a class="s2" href=""  target="_blank" ></a></h2>
+	<p class="price"><em>经销商报价</em><span class="b s1"></span></p><ul class="attr"></ul>
+</div>
+<ul class="imgList carList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="120" height="90" /></a>
+		<h5><a href=""  target="_blank" ></a></h5>
+		<p class="s1"></p>
+	</li></ul>
+		</div>
+		
+		
+		
+</div>
+	</div>
+	<script>ddSliderPlayers('tabwrap1_A','tabwrap1_B',0,'current');</script>
+</div>
+<div class="view-hover" invokename="C4_banner@汽车" altname="C4_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank" ><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="cc mt10">
+	<div class="fl w705">
+		<div class="carBox panel">
+<div class="hd">
+	<h3><div class="view-hover" invokename="C5_标题@汽车" altname="C5_标题@汽车" channelid="auto">网友拍车
+</div></h3>
+</div>
+<div class="bd" style="padding-right:0; padding-bottom:5px;"> <div class="view-hover" invokename="C6_左侧图文@汽车" altname="C6_左侧图文@汽车" channelid="auto">
+	<ul class="imgList carList2 cc"><li><a class="s2" href=""  target="_blank" ><img src="images/nopic.gif" width="145" height="110" /></a></li></ul>
+	
+</div> </div>
+		</div>
+	</div>
+	<div class="fr w245">
+		<div class="sideBox">
+<div class="hd"><div class="view-hover" invokename="C7_右侧标题@汽车" altname="C7_右侧标题@汽车" channelid="auto">
+	<h3>精彩专题推荐</h3>
+	<a class="more" href="#"  target="_blank" >更多</a>
+</div> </div>
+<div class="bd"> <div class="view-hover" invokename="C8_右侧图文@汽车" altname="C8_右侧图文@汽车" channelid="auto">
+	<ol class="topicList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="215" height="40" /></a>
+<h5><em>1</em><a class="s2" href=""  target="_blank" ></a></h5>
+</li></ol>
+	
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="C9_banner@汽车" altname="C9_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank"><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="D1_标题@汽车" altname="D1_标题@汽车" channelid="auto">车友说车
+
+</div></h3>
+		<ul class="more">
+<div class="view-hover" invokename="D2_文字连接@汽车" altname="D2_文字连接@汽车" channelid="auto">	<li><a href="#"  target="_blank">故障</a> |</li>
+	<li><a href="#"  target="_blank">油耗</a> |</li>
+	<li><a href="#"  target="_blank">驾驶</a> |</li>
+	<li><a href="#"  target="_blank">外观</a> |</li>
+	<li><a href="#"  target="_blank">配置</a> |</li>
+	<li><a href="#"  target="_blank">保养</a></li>
+
+		
+
+</div>
+		</ul>
+	</div>
+	<div class="bd cc">
+		<div class="fl w415 mr20">
+<div class="subject cc"> <div class="view-hover" invokename="D3_左侧图文@汽车" altname="D3_左侧图文@汽车" channelid="auto"><a href=""  target="_blank" ><img class="fl" src="images/nopic.gif" width="140" height="95" /></a>
+	<h4 class="f14 b mb5"><a class="s1" href=""  target="_blank" ></a></h4>
+	<p></p></div> </div>
+<div class="line" style="margin-top:10px;"></div>
+<div class="view-hover" invokename="D4_左侧列表@汽车" altname="D4_左侧列表@汽车" channelid="auto">
+<ul class="list list2Col cc mt10"></ul>
+
+</div> </div>
+		<div class="fl w265"> <div class="view-hover" invokename="D5_中间图文@汽车" altname="D5_中间图文@汽车" channelid="auto">
+<ul class="imgList2"><li><a href=""  target="_blank" ><img src="images/nopic.gif" class="fl" width="65" height="50" /></a></li></ul>
+
+</div> </div>
+		<div class="fr w225">
+<div class="subject3">
+	<h4><div class="view-hover" invokename="D6_右侧标题@汽车" altname="D6_右侧标题@汽车" channelid="auto">新手作业
+</div></h4>
+	<div class="topOne mb5"><div class="view-hover" invokename="D7_右侧图文@汽车" altname="D7_右侧图文@汽车" channelid="auto"><a class="pr" href=""  target="_blank" ><img src="images/nopic.gif" width="215" height="75" />
+<p></p>
+<i></i></a></div> </div>
+	<div class="view-hover" invokename="D8_右侧列表@汽车" altname="D8_右侧列表@汽车" channelid="auto">
+	<ul class="list"></ul>
+	
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="E1_标题@汽车" altname="E1_标题@汽车" channelid="auto">人 · 车 · 生活
+
+</div></h3>
+		<ul class="more">
+<div class="view-hover" invokename="E2_文字连接@汽车" altname="E2_文字连接@汽车" channelid="auto">
+<li><a href="#"  target="_blank">社区</a> |</li>
+<li><a href="#"  target="_blank">活动</a> |</li>
+<li><a href="#"  target="_blank">八卦</a></li>
+
+
+</div>
+		</ul>
+	</div>
+	<div class="bd cc">
+		<div id="pwSlidePlayer_1" class="pwSlide fl mr10"> <div class="view-hover" invokename="E3_播放器@汽车" altname="E3_播放器@汽车" channelid="auto"><ul class="switch" id="pp2_A"><li class="switchItem" style="display:none"><a href=""  target="_blank" ><img src="images/nopic.gif" width="325" height="210" />
+		<h3></h3>
+		</a></li></ul>
+<div class="pwSlide-bg"></div>
+<ul class="SwitchNav"  id="pp2_B"><li class="switchNavItem"><a href="#" onclick="return false;">1</a></li></ul>
+<script>ddSliderPlayers('pp2_A','pp2_B',4,'current');</script>
+		
+</div> </div>
+		<div class="subject4">
+<div class="top1"> <div class="view-hover" invokename="E4_中间摘要@汽车" altname="E4_中间摘要@汽车" channelid="auto"></div> </div>
+<div class="view-hover" invokename="E5_中间列表@汽车" altname="E5_中间列表@汽车" channelid="auto">
+<ul class="list list2Col cc"></ul>
+
+
+
+</div> <div class="view-hover" invokename="E6_中间图片@汽车" altname="E6_中间图片@汽车" channelid="auto">
+<ul class="imgList cc"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="80" height="50" /></a></li></ul>
+
+</div> </div>
+		<div class="fr w225">
+<div class="subject3">
+	<h4><div class="view-hover" invokename="E7_右侧标题@汽车" altname="E7_右侧标题@汽车" channelid="auto">车友活动
+</div></h4>
+	<div class="view-hover" invokename="E8_右侧图文@汽车" altname="E8_右侧图文@汽车" channelid="auto">	<div class="topOne mb5"><a class="pr" href=""  target="_blank" ><img src="images/nopic.gif" width="215" height="75" />
+	<p></p>
+	<i></i></a></div>
+	
+
+
+</div> <div class="view-hover" invokename="E9_右侧列表@汽车" altname="E9_右侧列表@汽车" channelid="auto">
+	<ul class="list"></ul>
+	
+</div> </div>
+		</div>
+	</div>
+</div>
+<div class="panel2 mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="F1_标题@汽车" altname="F1_标题@汽车" channelid="auto">汽车一条龙
+</div></h3>
+		<ul class="more">
+<div class="view-hover" invokename="F2_文字链接@汽车" altname="F2_文字链接@汽车" channelid="auto">
+<li><a href="#"  target="_blank">学车</a> |</li>
+<li><a href="#"  target="_blank">车险</a> |</li>
+<li><a href="#"  target="_blank">改装</a> |</li>
+<li><a href="#"  target="_blank">维修保养</a> |</li>
+<li><a href="#"  target="_blank">驾校咨询</a></li>
+
+		
+</div>
+		</ul>
+	</div>
+	
+	<div class="bd cc">
+		<div class="wrap">
+<ol class="carSteps">
+	<li class="item"><div class="view-hover" invokename="F3_图文1@汽车" altname="F3_图文1@汽车" channelid="auto">		<h4><em class="stepBg"><span class="sn_01">01</span></em>学车</h4><div class="topOne"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="210" height="70" />
+<p></p>
+<i></i></a></div><ul class="list mt10"></ul>
+		
+</div> </li>
+	<li class="item"> <div class="view-hover" invokename="F4_图文2@汽车" altname="F4_图文2@汽车" channelid="auto">
+		<h4><em class="stepBg"><span class="sn_02">02</span></em>买车</h4><div class="topOne"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="210" height="70" />
+<p></p>
+<i></i></a></div><ul class="list mt10"></ul>
+		
+</div> </li>
+	<li class="item"> <div class="view-hover" invokename="F5_图文3@汽车" altname="F5_图文3@汽车" channelid="auto">
+		<h4><em class="stepBg"><span class="sn_03">03</span></em>开车</h4><div class="topOne"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="210" height="70" />
+<p></p>
+<i></i></a></div><ul class="list mt10"></ul>
+		
+</div> </li>
+	<li class="item"> <div class="view-hover" invokename="F6_图文4@汽车" altname="F6_图文4@汽车" channelid="auto">
+		<h4><em class="stepBg"><span class="sn_04">04</span></em>养车</h4><div class="topOne"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="210" height="70" />
+<p></p>
+<i></i></a></div><ul class="list mt10"></ul>
+		
+</div> </li>
+</ol>
+		</div>
+	</div>
+</div>
+<div class="view-hover" invokename="F7_banner@汽车" altname="F7_banner@汽车" channelid="auto">
+<div class="mt10"><a href="#"  target="_blank"><img src="mode/area/themes/auto/temp/ad960x70.png" /></a></div>
+
+</div>
+<div class="panel carBox mt10">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="G1_标题@汽车" altname="G1_标题@汽车" channelid="auto">加入车友会
+</div></h3>
+	</div>
+	<div class="bd cc">
+		<ul class="clubList">
+<div class="view-hover" invokename="G2_左侧列表@汽车" altname="G2_左侧列表@汽车" channelid="auto"></div>
+		</ul>
+		<div class="clubBox">
+		<ul class="tabHolder" id="tabwrap2_B"><div class="view-hover" invokename="G3_右侧TAB@汽车" altname="G3_右侧TAB@汽车" channelid="auto">	<li class="switchNavItem"><a href="#"  target="_blank">活动回顾</a></li>
+	<li class="switchNavItem"><a href="#"  target="_blank">近期亮点</a></li>
+
+
+
+
+</div></ul>
+		<div id="tabwrap2_A"><div class="view-hover" invokename="G4A_右侧TAB内容1@汽车" altname="G4A_右侧TAB内容1@汽车" channelid="auto"><div class="switchItem tabPanel" style="display:none"><div class="subject cc"><a href=""  target="_blank" ><img class="fl" src="images/nopic.gif" width="85" height="65" /></a>
+		<h4><a href=""  target="_blank" ></a></h4>
+		<p></p>
+	</div><ul class="list list2Col cc"></ul>
+</div>
+
+</div><div class="view-hover" invokename="G4B_右侧TAB内容2@汽车" altname="G4B_右侧TAB内容2@汽车" channelid="auto"><div class="switchItem tabPanel" style="display:none"><div class="subject cc"><a href=""  target="_blank" ><img class="fl" src="images/nopic.gif" width="85" height="65" /></a>
+		<h4><a href=""  target="_blank" ></a></h4>
+		<p></p>
+	</div><ul class="list list2Col cc"></ul>
+</div>
+
+</div></div>
+		<script>ddSliderPlayers('tabwrap2_A','tabwrap2_B',0,'current');</script>
+		</div>
+	</div>
+</div></div>
+<div class="footer-wrap">
+<div class="c"></div>
+<div id="bottom"></div>
+<div id="footer">
+	<div class="mb5">
+	<div class="bottom tac">
+<span class="mr10"><a id="nav_key_up_12" href="sendemail.php" title="" >联系我们</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_13" href="simple/" title="" >无图版</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_14" href="m/introduce.php" title="" >手机浏览</a></span><span class="gray mr10">|</span><a href="job.php?action=erasecookie&verify=" rel="nofollow">清除Cookies</a>
+	</div>
+	</div>
+	<div class="f10 s6 tac">
+		<p class="mb5" id="footInfo">Powered by <a href="http://www.phpwind.net/" target="_blank" class="s4">phpwind v8.7</a>&nbsp;<a href="http://www.phpwind.com/certificate.php?host=localhost" target="_blank" rel="nofollow">Certificate</a> Copyright<br /> &copy;2003-2011 <a href="http://localhost/phpwind/" target="_blank">phpwind</a> 版权所有 <a href="http://www.miibeian.gov.cn" target="_blank"></a>  <span id="stats"></span>
+		</p>
+<script type="text/javascript" src="js/global.js"></script>
+<img height="0" width="0" src="mode.php?m=area&q=static&type=autostatic&alias=auto" />
+	</div>
+</div></div>
+</body></html>
+<script>
+var openmenu = {'td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu','td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu','td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu'};
+window.onReady(function(){
+	read.InitMenu();
+	//消息提示
+	new messageTip(90).init();
+});
+</script>
+

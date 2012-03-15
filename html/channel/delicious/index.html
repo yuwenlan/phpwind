@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>美食 - phpwind - Powered by phpwind</title>
+<meta name="generator" content="phpwind 8.7" />
+<meta name="description" content="phpwind" />
+<meta name="keywords" content="美食 - phpwind" />
+<base id="headbase" href="http://localhost/phpwind/" />
+<link rel="stylesheet" href="images/pw_core.css?" />
+<link rel="stylesheet" href="mode/area/images/head.css?" />
+<link rel="stylesheet" href="html/channel/delicious/images/style.css?" /><script type="text/javascript" src="js/core/core.js"></script>
+<script type="text/javascript" src="js/pw_ajax.js"></script>
+<script>
+var pw_baseurl = "http://localhost/phpwind";
+var imgpath = 'images';
+//var verifyhash = '';
+var modeimg = 'mode/area/images';
+var modeBase = '';
+var winduid = '';
+var windid	= '';
+var groupid	= '';
+var channelid	= '5';
+</script>
+<!--[if IE 9 ]>
+<meta name="msapplication-task" content="name=网站首页; action-uri=http://localhost/phpwind; icon-uri=favicon.ico" />
+<meta name="msapplication-task" content="name=个人中心; action-uri=u.php; icon-uri=images/ico/home.ico" />
+<meta name="msapplication-task" content="name=我的帖子; action-uri=apps.php?q=article; icon-uri=images/ico/post.ico" />
+<meta name="msapplication-task" content="name=消息中心; action-uri=message.php; icon-uri=images/ico/mail.ico" />
+<meta name="msapplication-task" content="name=我的设置; action-uri=profile.php; icon-uri=images/ico/edit.ico" />
+<![endif]-->
+</head>
+<body id="body">
+<div id="top">
+	<div class="top">
+    	<ul>
+            <li><a id="nav_key_up_15" href="http://www.phpwind.com/easysite/index.php" title="" target="_blank">10分钟建站</a></li>
+            <li><a id="nav_key_up_18" href="" title="" >社区服务</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_18">
+<ul class="menuList">
+	<li><a id="nav_key_up_19" href="hack.php?H_name=bank" title="" >银行</a></li>
+	<li><a id="nav_key_up_24" href="profile.php?action=toolcenter" title="" >道具中心</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_16" href="http://www.phpwind.net/convert.php" title="" target="_blank">轻松转换</a></li>
+            <li><a id="nav_key_up_25" href="sort.php" title="" >统计排行</a></li>
+<div style="display: none;" class="pw_menu" id="nav_key_sub_25">
+<ul class="menuList">
+	<li><a id="nav_key_up_26" href="sort.php" title="" >基本信息</a></li>
+	<li><a id="nav_key_up_27" href="sort.php?action=ipstate" title="" >到访IP统计</a></li>
+	<li><a id="nav_key_up_28" href="sort.php?action=team" title="" >管理团队</a></li>
+	<li><a id="nav_key_up_29" href="sort.php?action=admin" title="" >管理统计</a></li>
+	<li><a id="nav_key_up_30" href="sort.php?action=online" title="" >在线会员</a></li>
+	<li><a id="nav_key_up_31" href="sort.php?action=member" title="" >会员排行</a></li>
+	<li><a id="nav_key_up_32" href="sort.php?action=forum" title="" >版块排行</a></li>
+	<li><a id="nav_key_up_33" href="sort.php?action=article" title="" >帖子排行</a></li>
+	<li><a id="nav_key_up_34" href="link.php?action=taglist" title="" >标签排行</a></li>
+</ul>
+</div>
+            <li><a id="nav_key_up_17" href="http://www.phpwind.net/thread-htm-fid-125.html" title="" target="_blank">站长大会</a></li>
+            <li><a id="nav_key_up_35" href="faq.php" title="" >帮助</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+function updateCache(alias){
+	var url = 'mode.php?m=area&q=static&alias='+alias;
+	ajax.send(url,'',ajax.get);
+}
+</script>
+<div id="header">
+	<div id="head" class="cc">
+		<a href="http://localhost/phpwind" class="fl"><img src="images/wind/logo.png" class="fl" title="phpwind" /></a>
+		<script type="text/javascript" src="mode.php?m=area&q=header&ifactive=&alias=delicious&t=1331800459"></script>
+ </div>
+	<div class="nav_wrap">
+		<div id="navA">
+<div class="navAL fl">&nbsp;</div>
+        	<div class="navAR fr">&nbsp;</div>
+<div class="navA">
+	<div id="td_mymenu">快捷通道</div>
+	<div id="menu_mymenu" style="display:none;">
+	<div id="fast_menu" class="pw_menu">
+		<ul class="menuList cc">
+<li><a href="apps.php?q=article"><img src="u/images/icon/posts.png" alt="帖子" />帖子</a></li>
+<li><a href="apps.php?q=medal"><img src="u/images/icon/medal.png" alt="勋章" />勋章</a></li>
+<li><a href="u.php?a=friend"><img src="u/images/icon/friend.png" alt="关注" />关注</a></li>
+<li><a href="jobcenter.php"><img src="u/images/icon/jobcenter.png" alt="任务" />任务</a></li>
+		</ul>
+	</div>
+	</div>
+	<ul class="cc">
+		<li class="current"  onmouseover="tmpHideAllCross('nav_key_sub_2');"><a id="nav_key_up_2" href="index.php?m=area" title="" >门户</a></li>
+		<li><a id="nav_key_up_1" href="index.php?m=bbs" title="" >论坛</a></li>
+		<li><a id="nav_key_up_9" href="html/channel/tucool" title="" >图酷</a></li>
+		<li><a id="nav_key_up_3" href="index.php?m=cms" title="" >资讯</a></li>
+		<li><a id="nav_key_up_10" href="group.php" title="" >群组</a></li>
+	</ul>
+</div>
+        </div>
+        <div id="navB" class="pr">
+<div class="navB">
+	<div class="navBbg">
+                <ul class="menuListC cc"><li><a id="nav_key_up_5" href="html/channel/baby" title="" >亲子</a></li><li><a id="nav_key_up_6" href="html/channel/delicious" title="" >美食</a></li><li><a id="nav_key_up_7" href="html/channel/auto" title="" >汽车</a></li><li><a id="nav_key_up_8" href="html/channel/decoration" title="" >家装</a></li></ul>
+	</div>
+            </div>
+		</div>
+<script>
+var timeoutSpecifyId = {};
+
+function tmpClose(elementId) {
+	timeoutSpecifyId[elementId] = setTimeout(function() {
+		getObj(elementId).style.display = 'none';
+	}, 100);
+}
+function tmpHideAllCross(currentSubMenuId) {
+	var elements = getElementsByClassName('navB', getObj('navB'));
+	for (i=0; i<elements.length; i++) {
+		if (elements[i].id != '' && elements[i].id != currentSubMenuId) elements[i].style.display = 'none';
+	}
+}
+
+function ctrlSubMenu(parentId, subMenuId) {
+	clearTimeout(timeoutSpecifyId[subMenuId]);
+
+	tmpHideAllCross(subMenuId);
+	getObj(subMenuId).style.display = '';
+
+	getObj(parentId).onmouseout = function() {
+		tmpClose(subMenuId);
+		getObj(parentId).onmouseout = '';
+	};
+	getObj(subMenuId).onmouseout = function() {
+		tmpClose(subMenuId);
+	};
+	getObj(subMenuId).onmouseover = function() {
+		clearTimeout(timeoutSpecifyId[subMenuId]);
+		getObj(subMenuId).style.display = '';
+	};
+}
+</script>
+     </div>
+	<div id="searchA">
+    	<div class="searchA_right fr">&nbsp;</div>
+        <div class="searchA cc">
+        	<form action="searcher.php" method="post" onSubmit="return searchCheck(this);">
+	        	<input type="hidden" value="" name="verify">
+	            <input value="2" type="hidden" name="step">
+	            <input value="thread" type="hidden" id="search_type" name="type">
+	            <div class="ip"><input id="search_input" type="text" value="搜索其实很简单！" class="gray" name="keyword" onFocus="searchFocus(this)" onBlur="searchBlur(this)" /></div>
+	            <div class="s_select" onMouseOut="this.firstChild.style.display='none';" onMouseOver="this.firstChild.style.display='block';"><ul onClick="getSearchType(event)"><li type="thread" style="display:none">帖子</li><li type="user" >用户</li><li type="forum" >版块</li></ul><h6>帖子</h6></div>
+	            <button type="submit" class="cp fl">搜索</button>
+            </form>
+            <div class="s_tags">
+            <span>热搜：</span>
+                	<a href="searcher.php?keyword=结婚&type=thread">结婚</a>
+                	<a href="searcher.php?keyword=母婴&type=thread">母婴</a>
+                	<a href="searcher.php?keyword=phpwind&type=thread">phpwind</a>
+            </div>
+        </div>
+    </div>
+<script>
+function searchCheck(o) {
+	getVerify(o);
+	return searchInput();
+}
+
+function getVerify(o) {
+	o.verify.value = verifyhash;
+	return true;
+}
+</script>
+</div><div id="main">
+<div id="channelbanner">
+	<h2 class="hidden">美食频道</h2>
+	<ul class="fr" id="tabmenu_B"><div class="view-hover" invokename="A1_频道导航@美食" altname="A1_频道导航@美食" channelid="delicious">	<li class="switchNavItem"><a href="" target="_blank" >美食DIY</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >美食快讯</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >美食探店</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >外地美食</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >吃喝玩乐团</a></li>
+
+
+
+</div></ul></div>
+<div class="cc">
+	<div class="fl mr10 w298"> <div class="view-hover" invokename="A2_播放器@美食" altname="A2_播放器@美食" channelid="delicious"><div class="pwSlideWrap" style="padding-bottom:0">
+	<!--pwSlidePlayer 有特殊样式，不可换；其他播放器ID任意--->
+	<div id="pwSlidePlayer" class="pwSlide">
+		<ul class="switch" id="PicPlayer1_A"><li class="switchItem" style="display:none"><a href=""  target="_blank" ><img src="images/nopic.gif" width="290" height="280" />
+		<div class="txt">
+<h3></h3>
+<p></p>
+		</div>
+		</a></li></ul>
+		<div class="pwSlide-bg"></div>
+		<ul class="SwitchNav" id="PicPlayer1_B"><li class="switchNavItem"><a href=""  target="_blank"><img src="images/nopic.gif" width="47" height="47" /></a></li></ul>
+	</div>
+</div>
+<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+<script>ddSliderPlayers('PicPlayer1_A','PicPlayer1_B',4,'current');</script>
+
+
+
+</div>
+		<div class="panel mt10">
+<div class="hd">
+	<h3><div class="view-hover" invokename="A3_左下标题@美食" altname="A3_左下标题@美食" channelid="delicious">热门活动
+
+
+</div></h3>
+</div>
+<div class="bd" style="padding-bottom:0"><div class="view-hover" invokename="A4_左下图文列表@美食" altname="A4_左下图文列表@美食" channelid="delicious"><ul class="subjectList" style="padding-bottom:0"><li class="subject mb10"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="105" height="52" class="fl" /></a>
+<h4><a href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+	<div class="fl w400">
+		<div id="topNews" class="panel">
+<div class="hd">
+	<h3><div class="view-hover" invokename="A5_NEW标题@美食" altname="A5_NEW标题@美食" channelid="delicious">最新帖子
+
+
+</div></h3>
+</div>
+<div class="bd"><div class="view-hover" invokename="A6_热点摘要@美食" altname="A6_热点摘要@美食" channelid="delicious"><ul class="tops"></ul>
+
+
+
+</div><div class="view-hover" invokename="A7_热点标题列表@美食" altname="A7_热点标题列表@美食" channelid="delicious"><ul class="list list_f14"></ul>
+
+
+
+</div><div class="view-hover" invokename="A8_热点图片列表@美食" altname="A8_热点图片列表@美食" channelid="delicious"><ul class="imgList cc"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="100" height="90" /></a></li></ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+<div class="hd">
+	<h3 class="sb_0"><div class="view-hover" invokename="A9_右上标题@美食" altname="A9_右上标题@美食" channelid="delicious">享乐指南
+
+
+</div></h3>
+</div>
+<div class="bd">
+	<div class="tags"><div class="view-hover" invokename="A10_右上列表@美食" altname="A10_右上列表@美食" channelid="delicious">&nbsp;</div></div> 
+</div>
+		</div>
+		<div class="sideBox mt10">
+<div class="hd">
+	<h3 class="h3_1"><div class="view-hover" invokename="A11_右下标题@美食" altname="A11_右下标题@美食" channelid="delicious">热点专题
+
+
+</div></h3>
+</div>
+<div class="bd"><div class="view-hover" invokename="A12_右下图文@美食" altname="A12_右下图文@美食" channelid="delicious"><div class="subject cc mb10"> <a href=""  target="_blank" ><img src="images/nopic.gif" class="fl" width="60" height="60" /></a>
+		<h4><a href=""  target="_blank" ></a></h4>
+		<p><a href=""  target="_blank"  class="s1"> [详细]</a></p>
+	</div></div><div class="view-hover" invokename="A13_右下列表@美食" altname="A13_右下列表@美食" channelid="delicious"><ul class="list"></ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="cc mt10"><div class="view-hover" invokename="A14_广告@美食" altname="A14_广告@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div id="fb_0" class="foodBox">
+<div class="stripe"></div>
+<div class="fl w315">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="B1_左上标题@美食" altname="B1_左上标题@美食" channelid="delicious">探店情报
+
+
+</div></h3>
+	</div>
+	<div class="bd">
+		<ul class="imgList imgNoWrap imgW65">
+<div class="view-hover" invokename="B2_左上图片列表@美食" altname="B2_左上图片列表@美食" channelid="delicious"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="65" height="55" /></a></li></div>
+		</ul>
+	</div>
+</div>
+<div class="fr w215">
+	<div class="hd">
+		<h3><div class="view-hover" invokename="B3_中上标题@美食" altname="B3_中上标题@美食" channelid="delicious">店铺排行
+
+
+</div></h3>
+	</div>
+	<div class="bd"><div class="view-hover" invokename="B4_中上列表@美食" altname="B4_中上列表@美食" channelid="delicious"><ol class="rankingList fl"></ol>
+
+
+
+</div></div>
+</div>
+		</div>
+		<div id="fb_1" class="foodBox mt10">
+<div class="stripe"></div>
+<div class="hd">
+	<h3><div class="view-hover" invokename="B5_左下标题@美食" altname="B5_左下标题@美食" channelid="delicious">美食DIY
+
+
+</div></h3>
+</div>
+<div class="bd">
+	<div class="fl w315"><div class="view-hover" invokename="B6_左下图文摘要@美食" altname="B6_左下图文摘要@美食" channelid="delicious"><div class="subject cc"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="130" height="155" class="fl" /></a>
+		<h4><a href=""  target="_blank" ></a></h4>
+		<p></p>
+	</div></div></div>
+	<div class="fr w215"><div class="view-hover" invokename="B7_中下标题列表@美食" altname="B7_中下标题列表@美食" channelid="delicious"><ul class="list fl"></ul>
+
+
+
+</div></div>
+</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+<div class="hd">
+	<h3 class="h3_2"><div class="view-hover" invokename="B8_右侧标题@美食" altname="B8_右侧标题@美食" channelid="delicious">新店开张
+
+
+</div></h3>
+</div>
+<div class="bd"><div class="view-hover" invokename="B9_右侧图片列表@美食" altname="B9_右侧图片列表@美食" channelid="delicious"><ul class="imgList cc"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="90" height="65" /></a></li></ul>
+
+
+
+</div><div class="view-hover" invokename="B10_右侧标题列表@美食" altname="B10_右侧标题列表@美食" channelid="delicious"><ul class="list" style="margin-top:8px;"></ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="mt10"><div class="view-hover" invokename="B11_页面中部下缘广告位@美食" altname="B11_页面中部下缘广告位@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div id="fb_2" class="foodBox">
+<div class="stripe"></div>
+<div class="hd">
+	<h3><div class="view-hover" invokename="C1_左上标题@美食" altname="C1_左上标题@美食" channelid="delicious">私房菜
+
+
+</div></h3>
+</div>
+<div class="bd"><div class="view-hover" invokename="C2_左上图文列表@美食" altname="C2_左上图文列表@美食" channelid="delicious"><ul class="userList"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="65" height="65" /></a>
+<h4><a href=""  target="_blank"  class="s2"></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+		</div>
+		<div id="fb_3" class="foodBox mt10">
+<div class="stripe"></div>
+<div class="hd">
+	<h3><div class="view-hover" invokename="C3_左下标题@美食" altname="C3_左下标题@美食" channelid="delicious">食尚养生
+
+
+</div></h3>
+</div>
+<div class="bd">
+	<div class="fl w315"><div class="view-hover" invokename="C4_左下图文列表@美食" altname="C4_左下图文列表@美食" channelid="delicious"><div class="subject cc mb10"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="100" height="75" class="fl" /></a>
+		<h4><a href=""  target="_blank" ></a></h4>
+		<p></p>
+	</div></div></div>
+	<div class="fr w215"><div class="view-hover" invokename="C5_左下标题列表@美食" altname="C5_左下标题列表@美食" channelid="delicious"><ul class="list fl"></ul>
+
+
+
+</div></div>
+</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+<div class="hd">
+	<h3 class="h3_3"><div class="view-hover" invokename="C6_右侧标题@美食" altname="C6_右侧标题@美食" channelid="delicious">折扣优惠
+
+
+</div></h3>
+</div>
+<div class="bd" style="padding-bottom:18px;"><div class="view-hover" invokename="C7_右侧标题列表@美食" altname="C7_右侧标题列表@美食" channelid="delicious"><ul class="subjectList2 cc"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="65" height="65" class="fl" /></a>
+<h4><a class="s1" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li>
+		</li></ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="cc mt10"><div class="view-hover" invokename="C8_页面中下部下缘广告@美食" altname="C8_页面中下部下缘广告@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div class="panel">
+<div class="hd">
+	<h3><div class="view-hover" invokename="D1_左上标题@美食" altname="D1_左上标题@美食" channelid="delicious">火热推荐
+
+
+</div></h3>
+	<ul class="tabHolder" id="Tab1_A">
+		<div class="view-hover" invokename="D2_左上TAG@美食" altname="D2_左上TAG@美食" channelid="delicious"><li class="switchNavItem"><a href="#"  target="_blank">休闲娱乐</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">朋友聚餐 </a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">狂欢派对</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">宾馆酒店</a></li>
+
+
+
+</div>
+	</ul>
+</div>
+<div id="Tab1_B" class="bd" style="padding:10px 0 10px 5px;">
+	<div class="switchItem" style="display:none"><div class="view-hover" invokename="D3_左上TAG内容1@美食" altname="D3_左上TAG内容1@美食" channelid="delicious"><ul class="subjectList3 cc"><li class="subject"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="95" height="75" class="fl" /></a>
+<h4><a class="s1 b" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+	<div class="switchItem" style="display:none"><div class="view-hover" invokename="D4_左上TAG内容2@美食" altname="D4_左上TAG内容2@美食" channelid="delicious"><ul class="subjectList3 cc"><li class="subject"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="95" height="75" class="fl" /></a>
+<h4><a class="s1 b" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+	<div class="switchItem" style="display:none"><div class="view-hover" invokename="D5_左上TAG内容3@美食" altname="D5_左上TAG内容3@美食" channelid="delicious"><ul class="subjectList3 cc"><li class="subject"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="95" height="75" class="fl" /></a>
+<h4><a class="s1 b" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+	<div class="switchItem" style="display:none"><div class="view-hover" invokename="D6_左上TAG内容4@美食" altname="D6_左上TAG内容4@美食" channelid="delicious"><ul class="subjectList3 cc"><li class="subject"> <a href=""  target="_blank" ><img src="images/nopic.gif" width="95" height="75" class="fl" /></a>
+<h4><a class="s1 b" href=""  target="_blank" ></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div></div>
+</div>
+<script>ddSliderPlayers('Tab1_B','Tab1_A',0,'current');</script>
+		</div>
+		<div class="panel mt10">
+<div class="hd">
+	<h3><div class="view-hover" invokename="D7_左下标题@美食" altname="D7_左下标题@美食" channelid="delicious">美食盛宴
+
+
+</div></h3>
+</div>
+<div class="bd">
+	<div id="album" class="album"><a class="prev" href="javascript:ddHSlider(-126,'ddhSlider2')">向前</a><div class="view-hover" invokename="D9_左下图片列表@美食" altname="D9_左下图片列表@美食" channelid="delicious"><div class="listWrap" id="ddhSlider2">
+	<ul class="imgList cc"><li><a href=""  target="_blank" ><img src="images/nopic.gif" width="105" height="130" /></a></li></ul>
+</div>
+
+
+
+</div><a class="next" href="javascript:ddHSlider(126,'ddhSlider2')">向后</a></div>
+</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+<div class="hd">
+	<h3 class="h3_4"><div class="view-hover" invokename="D10_右侧标题@美食" altname="D10_右侧标题@美食" channelid="delicious">名菜名点
+
+
+</div></h3>
+</div>
+<div class="bd"><div class="view-hover" invokename="D11_右侧图片列表@美食" altname="D11_右侧图片列表@美食" channelid="delicious"><ul class="subjectList2 cc"><li> <a href=""  target="_blank" ><img src="images/nopic.gif" width="65" height="45" class="fl" /></a>
+<h4><a href=""  target="_blank"  class="s1"></a></h4>
+<p></p>
+		</li></ul>
+
+
+
+</div>
+	<div class="tags" style="padding:10px 5px 5px; border-top:1px dashed #dadada;"><div class="view-hover" invokename="D12_右侧标签链接@美食" altname="D12_右侧标签链接@美食" channelid="delicious">&nbsp;</div></div>
+</div>
+		</div>
+	</div>
+</div></div>
+<div class="footer-wrap">
+<div class="c"></div>
+<div id="bottom"></div>
+<div id="footer">
+	<div class="mb5">
+	<div class="bottom tac">
+<span class="mr10"><a id="nav_key_up_12" href="sendemail.php" title="" >联系我们</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_13" href="simple/" title="" >无图版</a></span><span class="gray mr10">|</span><span class="mr10"><a id="nav_key_up_14" href="m/introduce.php" title="" >手机浏览</a></span><span class="gray mr10">|</span><a href="job.php?action=erasecookie&verify=" rel="nofollow">清除Cookies</a>
+	</div>
+	</div>
+	<div class="f10 s6 tac">
+		<p class="mb5" id="footInfo">Powered by <a href="http://www.phpwind.net/" target="_blank" class="s4">phpwind v8.7</a>&nbsp;<a href="http://www.phpwind.com/certificate.php?host=localhost" target="_blank" rel="nofollow">Certificate</a> Copyright<br /> &copy;2003-2011 <a href="http://localhost/phpwind/" target="_blank">phpwind</a> 版权所有 <a href="http://www.miibeian.gov.cn" target="_blank"></a>  <span id="stats"></span>
+		</p>
+<script type="text/javascript" src="js/global.js"></script>
+<img height="0" width="0" src="mode.php?m=area&q=static&type=autostatic&alias=delicious" />
+	</div>
+</div></div>
+</body></html>
+<script>
+var openmenu = {'td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu','td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu','td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu','td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort','nav_key_up_18' : 'nav_key_sub_18','nav_key_up_25' : 'nav_key_sub_25','td_mymenu' : 'menu_mymenu'};
+window.onReady(function(){
+	read.InitMenu();
+	//消息提示
+	new messageTip(90).init();
+});
+</script>
+
