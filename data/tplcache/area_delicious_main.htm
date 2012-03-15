@@ -1,0 +1,540 @@
+<!--<?php
+print <<<EOT
+-->
+EOT;
+require modeEot('header');
+print <<<EOT
+<div id="channelbanner">
+	<h2 class="hidden">美食频道</h2>
+	<ul class="fr" id="tabmenu_B"><div class="view-hover" invokename="A1_频道导航@美食" altname="A1_频道导航@美食" channelid="delicious">	<li class="switchNavItem"><a href="" target="_blank" >美食DIY</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >美食快讯</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >美食探店</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >外地美食</a> |</li>
+	<li class="switchNavItem"><a href="" target="_blank" >吃喝玩乐团</a></li>
+
+
+
+</div></ul></div>
+<div class="cc">
+	<div class="fl mr10 w298"> <div class="view-hover" invokename="A2_播放器@美食" altname="A2_播放器@美食" channelid="delicious"><div class="pwSlideWrap" style="padding-bottom:0">
+	<!--pwSlidePlayer 有特殊样式，不可换；其他播放器ID任意--->
+	<div id="pwSlidePlayer" class="pwSlide">
+		<ul class="switch" id="PicPlayer1_A">
+EOT;
+$pwresult = pwTplGetData('A2_播放器@美食','A1播放器1A');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="switchItem" style="display:none"><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="290" height="280" />
+					<div class="txt">
+						<h3>$val[title]</h3>
+						<p>$val[descrip]</p>
+					</div>
+					</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		<div class="pwSlide-bg"></div>
+		<ul class="SwitchNav" id="PicPlayer1_B">
+EOT;
+foreach($pwresult as $value){
+print <<<EOT
+<li class="switchNavItem"><a href="$value[url]"  target="_blank"><img src="$value[image]" width="47" height="47" /></a></li>
+EOT;
+}
+print <<<EOT
+</ul>
+	</div>
+</div>
+<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+<script>ddSliderPlayers('PicPlayer1_A','PicPlayer1_B',4,'current');</script>
+
+
+
+</div>
+		<div class="panel mt10">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="A3_左下标题@美食" altname="A3_左下标题@美食" channelid="delicious">热门活动
+
+
+</div></h3>
+			</div>
+			<div class="bd" style="padding-bottom:0"><div class="view-hover" invokename="A4_左下图文列表@美食" altname="A4_左下图文列表@美食" channelid="delicious"><ul class="subjectList" style="padding-bottom:0">
+EOT;
+$pwresult = pwTplGetData('A4_左下图文列表@美食','标题摘要');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="subject mb10"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="105" height="52" class="fl" /></a>
+			<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+	<div class="fl w400">
+		<div id="topNews" class="panel">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="A5_NEW标题@美食" altname="A5_NEW标题@美食" channelid="delicious">最新帖子
+
+
+</div></h3>
+			</div>
+			<div class="bd"><div class="view-hover" invokename="A6_热点摘要@美食" altname="A6_热点摘要@美食" channelid="delicious"><ul class="tops">
+EOT;
+$pwresult = pwTplGetData('A6_热点摘要@美食','第一屏头条');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>
+			<h2 class="s1"><a href="$val[url]"  target="_blank" >$val[title]</a></h2>
+			<p>$val[descrip]<a class="s1" href="$val[url]"  target="_blank" >（阅读全文）</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div><div class="view-hover" invokename="A7_热点标题列表@美食" altname="A7_热点标题列表@美食" channelid="delicious"><ul class="list list_f14">
+EOT;
+$pwresult = pwTplGetData('A7_热点标题列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><em class="s1">[$val[forumname]]</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div><div class="view-hover" invokename="A8_热点图片列表@美食" altname="A8_热点图片列表@美食" channelid="delicious"><ul class="imgList cc">
+EOT;
+$pwresult = pwTplGetData('A8_热点图片列表@美食','图片列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="100" height="90" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+			<div class="hd">
+				<h3 class="sb_0"><div class="view-hover" invokename="A9_右上标题@美食" altname="A9_右上标题@美食" channelid="delicious">享乐指南
+
+
+</div></h3>
+			</div>
+			<div class="bd">
+				<div class="tags"><div class="view-hover" invokename="A10_右上列表@美食" altname="A10_右上列表@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('A10_右上列表@美食','链接标签');
+print <<<EOT
+&nbsp;
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a class="s1" href="$val[url]"  target="_blank" >$val[title]</a>&nbsp; | &nbsp;
+EOT;
+}print <<<EOT
+</div></div> 
+			</div>
+		</div>
+		<div class="sideBox mt10">
+			<div class="hd">
+				<h3 class="h3_1"><div class="view-hover" invokename="A11_右下标题@美食" altname="A11_右下标题@美食" channelid="delicious">热点专题
+
+
+</div></h3>
+			</div>
+			<div class="bd"><div class="view-hover" invokename="A12_右下图文@美食" altname="A12_右下图文@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('A12_右下图文@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="subject cc mb10"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" class="fl" width="60" height="60" /></a>
+		<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+		<p>$val[descrip]<a href="$val[url]"  target="_blank"  class="s1"> [详细]</a></p>
+	</div>
+EOT;
+}print <<<EOT
+</div><div class="view-hover" invokename="A13_右下列表@美食" altname="A13_右下列表@美食" channelid="delicious"><ul class="list">
+EOT;
+$pwresult = pwTplGetData('A13_右下列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="cc mt10"><div class="view-hover" invokename="A14_广告@美食" altname="A14_广告@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div id="fb_0" class="foodBox">
+			<div class="stripe"></div>
+			<div class="fl w315">
+				<div class="hd">
+					<h3><div class="view-hover" invokename="B1_左上标题@美食" altname="B1_左上标题@美食" channelid="delicious">探店情报
+
+
+</div></h3>
+				</div>
+				<div class="bd">
+					<ul class="imgList imgNoWrap imgW65">
+						<div class="view-hover" invokename="B2_左上图片列表@美食" altname="B2_左上图片列表@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('B2_左上图片列表@美食','图片列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="65" height="55" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</div>
+					</ul>
+				</div>
+			</div>
+			<div class="fr w215">
+				<div class="hd">
+					<h3><div class="view-hover" invokename="B3_中上标题@美食" altname="B3_中上标题@美食" channelid="delicious">店铺排行
+
+
+</div></h3>
+				</div>
+				<div class="bd"><div class="view-hover" invokename="B4_中上列表@美食" altname="B4_中上列表@美食" channelid="delicious"><ol class="rankingList fl">
+EOT;
+$pwresult = pwTplGetData('B4_中上列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+
+
+
+</div></div>
+			</div>
+		</div>
+		<div id="fb_1" class="foodBox mt10">
+			<div class="stripe"></div>
+			<div class="hd">
+				<h3><div class="view-hover" invokename="B5_左下标题@美食" altname="B5_左下标题@美食" channelid="delicious">美食DIY
+
+
+</div></h3>
+			</div>
+			<div class="bd">
+				<div class="fl w315"><div class="view-hover" invokename="B6_左下图文摘要@美食" altname="B6_左下图文摘要@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('B6_左下图文摘要@美食','图文模块');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="subject cc"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="130" height="155" class="fl" /></a>
+		<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+		<p>$val[descrip]</p>
+	</div>
+EOT;
+}print <<<EOT
+</div></div>
+				<div class="fr w215"><div class="view-hover" invokename="B7_中下标题列表@美食" altname="B7_中下标题列表@美食" channelid="delicious"><ul class="list fl">
+EOT;
+$pwresult = pwTplGetData('B7_中下标题列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >【<span class="s2">$val[forumname]</span>】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+			</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+			<div class="hd">
+				<h3 class="h3_2"><div class="view-hover" invokename="B8_右侧标题@美食" altname="B8_右侧标题@美食" channelid="delicious">新店开张
+
+
+</div></h3>
+			</div>
+			<div class="bd"><div class="view-hover" invokename="B9_右侧图片列表@美食" altname="B9_右侧图片列表@美食" channelid="delicious"><ul class="imgList cc">
+EOT;
+$pwresult = pwTplGetData('B9_右侧图片列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="90" height="65" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div><div class="view-hover" invokename="B10_右侧标题列表@美食" altname="B10_右侧标题列表@美食" channelid="delicious"><ul class="list" style="margin-top:8px;">
+EOT;
+$pwresult = pwTplGetData('B10_右侧标题列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="mt10"><div class="view-hover" invokename="B11_页面中部下缘广告位@美食" altname="B11_页面中部下缘广告位@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div id="fb_2" class="foodBox">
+			<div class="stripe"></div>
+			<div class="hd">
+				<h3><div class="view-hover" invokename="C1_左上标题@美食" altname="C1_左上标题@美食" channelid="delicious">私房菜
+
+
+</div></h3>
+			</div>
+			<div class="bd"><div class="view-hover" invokename="C2_左上图文列表@美食" altname="C2_左上图文列表@美食" channelid="delicious"><ul class="userList">
+EOT;
+$pwresult = pwTplGetData('C2_左上图文列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="65" height="65" /></a>
+			<h4><a href="$val[url]"  target="_blank"  class="s2">$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+		<div id="fb_3" class="foodBox mt10">
+			<div class="stripe"></div>
+			<div class="hd">
+				<h3><div class="view-hover" invokename="C3_左下标题@美食" altname="C3_左下标题@美食" channelid="delicious">食尚养生
+
+
+</div></h3>
+			</div>
+			<div class="bd">
+				<div class="fl w315"><div class="view-hover" invokename="C4_左下图文列表@美食" altname="C4_左下图文列表@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('C4_左下图文列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<div class="subject cc mb10"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="100" height="75" class="fl" /></a>
+		<h4><a href="$val[url]"  target="_blank" >$val[title]</a></h4>
+		<p>$val[descrip]</p>
+	</div>
+EOT;
+}print <<<EOT
+</div></div>
+				<div class="fr w215"><div class="view-hover" invokename="C5_左下标题列表@美食" altname="C5_左下标题列表@美食" channelid="delicious"><ul class="list fl">
+EOT;
+$pwresult = pwTplGetData('C5_左下标题列表@美食','标题列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="#">【<span class="s2">$val[forumname]</span>】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+			</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+			<div class="hd">
+				<h3 class="h3_3"><div class="view-hover" invokename="C6_右侧标题@美食" altname="C6_右侧标题@美食" channelid="delicious">折扣优惠
+
+
+</div></h3>
+			</div>
+			<div class="bd" style="padding-bottom:18px;"><div class="view-hover" invokename="C7_右侧标题列表@美食" altname="C7_右侧标题列表@美食" channelid="delicious"><ul class="subjectList2 cc">
+EOT;
+$pwresult = pwTplGetData('C7_右侧标题列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="65" height="65" class="fl" /></a>
+			<h4><a class="s1" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+		</div>
+	</div>
+</div>
+<div class="cc mt10"><div class="view-hover" invokename="C8_页面中下部下缘广告@美食" altname="C8_页面中下部下缘广告@美食" channelid="delicious">
+
+</div></div>
+<div class="cc mt10">
+	<div class="fl w708">
+		<div class="panel">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="D1_左上标题@美食" altname="D1_左上标题@美食" channelid="delicious">火热推荐
+
+
+</div></h3>
+				<ul class="tabHolder" id="Tab1_A">
+					<div class="view-hover" invokename="D2_左上TAG@美食" altname="D2_左上TAG@美食" channelid="delicious"><li class="switchNavItem"><a href="#"  target="_blank">休闲娱乐</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">朋友聚餐 </a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">狂欢派对</a></li>
+<li class="switchNavItem"><a href="#"  target="_blank">宾馆酒店</a></li>
+
+
+
+</div>
+				</ul>
+			</div>
+			<div id="Tab1_B" class="bd" style="padding:10px 0 10px 5px;">
+				<div class="switchItem" style="display:none"><div class="view-hover" invokename="D3_左上TAG内容1@美食" altname="D3_左上TAG内容1@美食" channelid="delicious"><ul class="subjectList3 cc">
+EOT;
+$pwresult = pwTplGetData('D3_左上TAG内容1@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="subject"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="95" height="75" class="fl" /></a>
+			<h4><a class="s1 b" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+				<div class="switchItem" style="display:none"><div class="view-hover" invokename="D4_左上TAG内容2@美食" altname="D4_左上TAG内容2@美食" channelid="delicious"><ul class="subjectList3 cc">
+EOT;
+$pwresult = pwTplGetData('D4_左上TAG内容2@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="subject"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="95" height="75" class="fl" /></a>
+			<h4><a class="s1 b" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+				<div class="switchItem" style="display:none"><div class="view-hover" invokename="D5_左上TAG内容3@美食" altname="D5_左上TAG内容3@美食" channelid="delicious"><ul class="subjectList3 cc">
+EOT;
+$pwresult = pwTplGetData('D5_左上TAG内容3@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="subject"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="95" height="75" class="fl" /></a>
+			<h4><a class="s1 b" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+				<div class="switchItem" style="display:none"><div class="view-hover" invokename="D6_左上TAG内容4@美食" altname="D6_左上TAG内容4@美食" channelid="delicious"><ul class="subjectList3 cc">
+EOT;
+$pwresult = pwTplGetData('D6_左上TAG内容4@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="subject"> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="95" height="75" class="fl" /></a>
+			<h4><a class="s1 b" href="$val[url]"  target="_blank" >$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div></div>
+			</div>
+			<script>ddSliderPlayers('Tab1_B','Tab1_A',0,'current');</script>
+		</div>
+		<div class="panel mt10">
+			<div class="hd">
+				<h3><div class="view-hover" invokename="D7_左下标题@美食" altname="D7_左下标题@美食" channelid="delicious">美食盛宴
+
+
+</div></h3>
+			</div>
+			<div class="bd">
+				<div id="album" class="album"><a class="prev" href="javascript:ddHSlider(-126,'ddhSlider2')">向前</a><div class="view-hover" invokename="D9_左下图片列表@美食" altname="D9_左下图片列表@美食" channelid="delicious"><div class="listWrap" id="ddhSlider2">
+	<ul class="imgList cc">
+EOT;
+$pwresult = pwTplGetData('D9_左下图片列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="105" height="130" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+</div>
+
+
+
+</div><a class="next" href="javascript:ddHSlider(126,'ddhSlider2')">向后</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="fr w242">
+		<div class="sideBox">
+			<div class="hd">
+				<h3 class="h3_4"><div class="view-hover" invokename="D10_右侧标题@美食" altname="D10_右侧标题@美食" channelid="delicious">名菜名点
+
+
+</div></h3>
+			</div>
+			<div class="bd"><div class="view-hover" invokename="D11_右侧图片列表@美食" altname="D11_右侧图片列表@美食" channelid="delicious"><ul class="subjectList2 cc">
+EOT;
+$pwresult = pwTplGetData('D11_右侧图片列表@美食','图文列表');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li> <a href="$val[url]"  target="_blank" ><img src="$val[image]" width="65" height="45" class="fl" /></a>
+			<h4><a href="$val[url]"  target="_blank"  class="s1">$val[title]</a></h4>
+			<p>$val[descrip]</p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+</div>
+				<div class="tags" style="padding:10px 5px 5px; border-top:1px dashed #dadada;"><div class="view-hover" invokename="D12_右侧标签链接@美食" altname="D12_右侧标签链接@美食" channelid="delicious">
+EOT;
+$pwresult = pwTplGetData('D12_右侧标签链接@美食','标签');
+print <<<EOT
+&nbsp;
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a class="s1" href="$val[url]"  target="_blank" >$val[title]</a>&nbsp;&nbsp;| &nbsp;
+EOT;
+}print <<<EOT
+</div></div>
+			</div>
+		</div>
+	</div>
+</div>
+EOT;
+require modeEot('footer');
+print <<<EOT
+<!--
+EOT;
+?>-->

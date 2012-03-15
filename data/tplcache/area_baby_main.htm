@@ -1,0 +1,808 @@
+<!--<?php
+print <<<EOT
+-->
+EOT;
+require modeEot('header');
+print <<<EOT
+<div id="baby">
+	<ul class="babyNav" id="tabmenu_B">
+		<div class="view-hover" invokename="A1_头部栏目导航@亲子" altname="A1_头部栏目导航@亲子" channelid="baby"><li class="switchNavItem"><a href="" target="_blank" >准妈俱乐部</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >亲子俱乐部</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >无敌宝宝秀</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >试用体验</a></li>
+<li class="switchNavItem"><a href="" target="_blank" >母婴用品</a></li>
+
+
+
+
+</div>
+	</ul>
+	<div id="babyCon">
+		<div class="view-hover" invokename="A2_头部头条@亲子" altname="A2_头部头条@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('A2_头部头条@亲子','标题摘要模块X1');
+print <<<EOT
+<div class="tops">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<h1><a href="$val[url]" >$val[title]</a></h1>
+		<p>$val[descrip]</p>
+EOT;
+}print <<<EOT
+</div>
+EOT;
+$pwresult = pwTplGetData('A2_头部头条@亲子','小标题X2');
+print <<<EOT
+<ul>
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  ><em>【$val[forumname]】</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+	</div>
+	<div id="babyBottom">
+		<div class="view-hover" invokename="A3_头部通知和入口@亲子" altname="A3_头部通知和入口@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('A3_头部通知和入口@亲子','小标题X2');
+print <<<EOT
+<ul>
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+EOT;
+$pwresult = pwTplGetData('A3_头部通知和入口@亲子','会员名X4');
+print <<<EOT
+<dl>
+	<dt>获奖通知:</dt>
+	<dd>
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]" >$val[title]</a>
+EOT;
+}print <<<EOT
+</dd>
+</dl>
+
+
+
+
+</div>
+	</div>
+</div>
+<div class="cc">
+	<div class="sidebar">
+		<div class="view-hover" invokename="B1_播放器@亲子" altname="B1_播放器@亲子" channelid="baby"><div id="pwSlidePlayer" class="pwSlide" onmouseover="pwSlidePlayer('pause');" onmouseout="pwSlidePlayer('goon');">
+EOT;
+$pwresult = pwTplGetData('B1_播放器@亲子','播放器');
+foreach($pwresult as $key=>$val){
+$tmpStyle = $key ? 'style="display:none;"' : '';
+print <<<EOT
+<div id="Switch_$key" $tmpStyle>
+			<a href="$val[url]" target="_blank" ><img class="pwSlideFilter" src="$val[image]" width="302" height="252"/><h3>$val[title]</h3></a>
+		</div>
+EOT;
+}print <<<EOT
+<span class="pwSlide-bg"></span>
+	<ul id="SwitchNav" class="SwitchNav"></ul>
+</div>
+<div class="c"></div>
+<script type="text/javascript" src="js/picplayer.js"></script>
+<script type="text/javascript">pwSlidePlayer('play',1);</script>
+
+
+
+
+
+</div>
+		<div class="sideTop"></div>
+		<div class="view-hover" invokename="B2_左侧标题@亲子" altname="B2_左侧标题@亲子" channelid="baby"><h2 class="sideTitle"><strong>免费</strong>试用火热进行中</h2>
+
+
+
+
+</div>
+		<div class="sideMid"></div>
+		<div class="sideBox">
+			<div class="view-hover" invokename="B3_左侧图文1@亲子" altname="B3_左侧图文1@亲子" channelid="baby"><ul class="list2">
+EOT;
+$pwresult = pwTplGetData('B3_左侧图文1@亲子','活动1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="88" height="88" class="fl" /></a>
+			<h4><a href="$val[url]"  target="_blank" >$val[title]<em class="hot"><img src="mode/area/themes/baby/images/hot.png" /></em></a></h4>
+			<p>$val[descript]</p>
+			<p><a class="apply" href="$val[url]">马上申请</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			<div class="view-hover" invokename="B4_左侧列表@亲子" altname="B4_左侧列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('B4_左侧列表@亲子','标题列表X6');
+print <<<EOT
+<ul class="list3">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank">【$val[forumname]】$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+		</div>
+		<div class="sideMid"></div>
+		<div class="view-hover" invokename="B5_左侧图文2@亲子" altname="B5_左侧图文2@亲子" channelid="baby"><div class="sideBox">
+	<h3><strong>试用</strong>达人</h3>
+EOT;
+$pwresult = pwTplGetData('B5_左侧图文2@亲子','图文列表X4');
+print <<<EOT
+<ul class="list4">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]" target="_blank"><img src="$val[image]" width="57" height="57" class="fl" /></a>
+				<h4><a href="$val[url]"  target="_blank">$val[title]</a></h4>
+				<p>$val[descrip]..<a href="$val[url]"  target="_blank">[详情]</a></p>
+			</li>
+EOT;
+}print <<<EOT
+</ul>
+</div>
+
+
+
+
+</div> 
+		<div class="sideBottom"></div>
+		<div class="view-hover" invokename="B6_左侧广告@亲子" altname="B6_左侧广告@亲子" channelid="baby"><div class="mt10"><a href="#" target="_blank"><img src="mode/area/themes/baby/images/temp/ad302x65.png" width="302" height="65" /></a></div>
+<div class="mt10"><a href="#" target="_blank"><img src="mode/area/themes/baby/images/temp/ad302x65.png" width="302" height="65" /></a></div>
+
+
+
+
+</div>
+	</div>
+	<div class="main">
+		<div class="fl w415">
+			<div class="view-hover" invokename="B7_中间摘要@亲子" altname="B7_中间摘要@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('B7_中间摘要@亲子','头条标题和摘要X3');
+print <<<EOT
+<ul class="tops">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li class="t{$key}">
+			<h2><a href="$val[url]"  target="_blank">$val[title]</a></h2>
+			<p>$val[descrip]…<a href="$val[url]"  target="_blank">（阅读全文）</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			<div class="view-hover" invokename="B8_中间列表@亲子" altname="B8_中间列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('B8_中间列表@亲子','标题列表X18');
+print <<<EOT
+<ul class="list1 cc">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"   target="_blank"><em>[$val[forumname]]</em>$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+</div>
+		</div>
+		<div class="fr w222">
+			<div id="tools" class="panel1">
+				<!--pw id="B9_实用工具箱@亲子" /-->
+				<div class="hd"><h3>实用工具箱</h3></div>
+				<div class="bd">
+					<dl class="open">
+						<dt class="cc" id="tabwrap1_B">
+							<div class="view-hover" invokename="B9_右侧tab@亲子" altname="B9_右侧tab@亲子" channelid="baby">							<span class="switchNavItem"><a href="">妈妈</a></span>
+							<span class="switchNavItem"><a href="">宝宝</a></span>
+						
+							
+</div>
+						</dt>
+						<dd  id="tabwrap1_A">
+						<div class="view-hover" invokename="B10_右侧tab内容1@亲子" altname="B10_右侧tab内容1@亲子" channelid="baby">	<p class="switchItem" style="display:none">
+EOT;
+$pwresult = pwTplGetData('B10_右侧tab内容1@亲子','链接标签1');
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]">[$val[title]]</a>
+EOT;
+}print <<<EOT
+</p>
+						
+						
+</div>
+						<div class="view-hover" invokename="B11_右侧tab内容2@亲子" altname="B11_右侧tab内容2@亲子" channelid="baby">	<p class="switchItem" style="display:none">
+EOT;
+$pwresult = pwTplGetData('B11_右侧tab内容2@亲子','链接标签2');
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]">[$val[title]]</a>
+EOT;
+}print <<<EOT
+</p>
+
+<script type="text/javascript" src="mode/area/js/ddsliderplayer.js"></script>
+
+
+</div>
+						</dd>
+					</dl>
+				</div>
+				<script>ddSliderPlayers('tabwrap1_A','tabwrap1_B',0,'current');</script>
+			</div>
+			<div class="mt10">
+				<div class="view-hover" invokename="B12_右侧广告@亲子" altname="B12_右侧广告@亲子" channelid="baby"><a href="#"><img src="mode/area/themes/baby/images/temp/ad222x160.png" /></a>
+
+
+
+
+</div>
+			</div>
+		</div>
+		<div class="c"></div>
+		<div class="cc mt10">
+			<div class="view-hover" invokename="B12_中间广告1@亲子" altname="B12_中间广告1@亲子" channelid="baby"><a href="#"><img class="fl mr10" src="mode/area/themes/baby/images/temp/ad202x65.png" /></a> <a href="#"><img class="fl" src="mode/area/themes/baby/images/temp/ad202x65.png" /></a> <a href="#"><img class="fr" src="mode/area/themes/baby/images/temp/ad222x65.png" /></a>
+
+
+
+
+</div>
+		</div>
+		<div id="panelA" class="panel1 mt10">
+			<div class="view-hover" invokename="B13_左侧图文1@亲子" altname="B13_左侧图文1@亲子" channelid="baby"><div class="hd">
+EOT;
+$pwresult = pwTplGetData('B13_左侧图文1@亲子','more链接指向');
+foreach($pwresult as $key=>$val){print <<<EOT
+<h3>精彩活动</h3>
+		<a class="more" href="$val[url]">more</a>
+EOT;
+}print <<<EOT
+</div>
+<div class="bd">
+	<div class="bdWrap cc" style="padding:11px 14px 10px;">
+		<div class="fl subject1">
+EOT;
+$pwresult = pwTplGetData('B13_左侧图文1@亲子','左边图文X1');
+print <<<EOT
+<div class="top1">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]" ><img src="$val[image]" width="105" height="80"/></a>
+					<h4><a href="$val[url]"  target="_blank">$val[title]</a></h4>
+					<p>$val[descrip]</p>
+EOT;
+}print <<<EOT
+</div>
+EOT;
+$pwresult = pwTplGetData('B13_左侧图文1@亲子','左边标题列表X4');
+print <<<EOT
+<ul>
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+		<div class="fr subject1">
+EOT;
+$pwresult = pwTplGetData('B13_左侧图文1@亲子','右边图文X1');
+print <<<EOT
+<div class="top1">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]" ><img src="$val[image]" width="105" height="80"/></a>
+					<h4><a href="$val[url]"  target="_blank">$val[title]</a></h4>
+					<p>$val[descrip]</p>
+EOT;
+}print <<<EOT
+</div>
+EOT;
+$pwresult = pwTplGetData('B13_左侧图文1@亲子','右边标题列表X4');
+print <<<EOT
+<ul>
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" title="$val[title]">$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div class="mt10">
+			<div class="view-hover" invokename="B14_中间广告2@亲子" altname="B14_中间广告2@亲子" channelid="baby"><a href="#"><img src="mode/area/themes/baby/images/temp/ad648x65.png" /></a>
+
+
+
+
+</div>
+		</div>
+		<div id="panelB" class="panel1 mt10">
+			<div class="view-hover" invokename="B15_左侧图文2@亲子" altname="B15_左侧图文2@亲子" channelid="baby"><div class="hd">
+	<h3>Color Baby</h3>
+</div>
+<div class="bd">
+	<div class="bdWrap">
+		<div id="babys">
+EOT;
+$pwresult = pwTplGetData('B15_左侧图文2@亲子','小朋友头像X1');
+print <<<EOT
+<div id="babyShow">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" ><img src="$val[image]" width="295" height="170" /></a>
+EOT;
+}print <<<EOT
+</div>
+EOT;
+$pwresult = pwTplGetData('B15_左侧图文2@亲子','小朋友头像列表X15');
+print <<<EOT
+<ul id="babyList">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="48" height="48" /></a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div id="panelC" class="panel1 mt10">
+			<div class="view-hover" invokename="B16_左侧图文3@亲子" altname="B16_左侧图文3@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('B16_左侧图文3@亲子','更多链接指向');
+print <<<EOT
+<div class="hd">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<h3>生日宝宝</h3>
+		<a class="more" href="$val[url]" target="_blank">more</a>
+EOT;
+}print <<<EOT
+</div>
+<div class="bd">
+EOT;
+$pwresult = pwTplGetData('B16_左侧图文3@亲子','宝宝生日详细');
+print <<<EOT
+<div class="bdWrap cc">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<div id="pwSlide2" class="pwSlide">
+			<ul class="switch">
+				<li>
+					<a href="$val[url]"  target="_blank" ><img  src="$val[image]" width="295" height="170"  />
+						<h3>$val[title]</h3>
+					</a></li>
+			</ul>
+			<div class="pwSlide-bg" style="background-color:#C06"></div>
+		</div>
+		<div id="babyBirthday">
+				<p><span>ＩＤ：$val[author]</span><a href="$val[url]" target="_blank" class="wish">给宝宝送祝福</a><br />
+					宝宝名字：<strong>$val[title]</strong></p>
+				<p>$val[descrip]</p>
+		</div>
+EOT;
+}print <<<EOT
+</div>
+</div>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div class="brand cc mt10">
+	<div class="view-hover" invokename="B17_横幅广告@亲子" altname="B17_横幅广告@亲子" channelid="baby"><h3>品牌专区</h3>
+<ul class="brandList">
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/firmus.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/beingmate.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/happyprince.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/nestle.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/wissun.png" /></a></li>
+	<li><a href="#"><img src="mode/area/themes/baby/images/temp/brand/xianzhi.png" /></a></li>
+</ul>
+
+
+
+
+</div>
+</div>
+<div id="pregnancy" class="panel2 mt10">
+	<div class="view-hover" invokename="C1_栏目导航@亲子" altname="C1_栏目导航@亲子" channelid="baby"><h1 class="caption">孕育新生命</h1>
+<div class="hd">
+	<h3>准妈俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>准备怀孕：</em><a href="#">叶酸</a></li>
+		<li><em>孕早期：</em><a href="#">建卡</a>｜<a href="#">胎教</a></li>
+		<li><em>孕中期：</em><a href="#">B超</a>｜<a href="#">孕检</a></li>
+		<li><em>孕晚期：</em><a href="#">妊娠纹</a>｜<a href="#">胎动</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+			<div class="view-hover" invokename="C2_中间图文@亲子" altname="C2_中间图文@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide">
+EOT;
+$pwresult = pwTplGetData('C2_中间图文@亲子','左边图片X1');
+print <<<EOT
+<ul class="switch">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="235" height="150" />
+				<h3>$val[title]</h3>
+				</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		<div class="pwSlide-bg" style="background-color:#030"></div>
+	</div>
+</div>
+EOT;
+$pwresult = pwTplGetData('C2_中间图文@亲子','左侧标题摘要X2');
+print <<<EOT
+<ul class="tops">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>
+			<h2><a href="$val[url]"  target="_blank" >$val[title]</a></h2>
+			<p>$val[descrip]<a href="$val[url]"  target="_blank" >[详情]</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			<div class="c"></div>
+			<div class="view-hover" invokename="C3_中间列表@亲子" altname="C3_中间列表@亲子" channelid="baby"><div class="steps">
+	<ol>
+		<li class="item"><em>1</em><a href="#">准备怀孕</a>
+EOT;
+$pwresult = pwTplGetData('C3_中间列表@亲子','准备怀孕');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</li>
+		<li class="item"><em>2</em><a href="#">孕前期</a>
+EOT;
+$pwresult = pwTplGetData('C3_中间列表@亲子','孕前期');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</li>
+		<li class="item"><em>3</em><a href="#">孕中期</a>
+EOT;
+$pwresult = pwTplGetData('C3_中间列表@亲子','孕中期');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</li>
+		<li class="item"><em>4</em><a href="#">孕后期</a>
+EOT;
+$pwresult = pwTplGetData('C3_中间列表@亲子','孕后期');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		</li>
+	</ol>
+</div>
+
+
+
+
+</div>
+		</div>
+		<div class="fr w195">
+		<h4>好孕在线课堂</h4>
+			<div class="view-hover" invokename="C4_左侧列表@亲子" altname="C4_左侧列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('C4_左侧列表@亲子','课堂排行');
+print <<<EOT
+<ol class="rankingList">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div id="childhoot" class="panel2 mt10">
+	<div class="view-hover" invokename="D1_栏目导航@亲子" altname="D1_栏目导航@亲子" channelid="baby"><h1 class="caption">幼儿期 [0月-3岁]</h1>
+<div class="hd">
+	<h3>亲子俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>新生儿：</em><a href="#">母乳</a>｜<a href="#">起名</a></li>
+		<li><em>婴儿期：</em><a href="#">辅食</a>｜<a href="#">补钙</a></li>
+		<li><em>幼儿期：</em><a href="#">早教</a>｜<a href="#">感冒</a></li>
+		<li><em>孕晚期：</em><a href="#">妊娠纹</a>｜<a href="#">胎动</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+			<div class="view-hover" invokename="D2_中间图文摘要@亲子" altname="D2_中间图文摘要@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide">
+EOT;
+$pwresult = pwTplGetData('D2_中间图文摘要@亲子','左边图片X1');
+print <<<EOT
+<ul class="switch">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="235" height="150" />
+				<h3>$val[title]</h3>
+				</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		<div class="pwSlide-bg" style="background-color:#F30"></div>
+	</div>
+</div>
+EOT;
+$pwresult = pwTplGetData('D2_中间图文摘要@亲子','左侧标题摘要X2');
+print <<<EOT
+<ul class="tops">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>
+			<h2><a href="$val[url]"  target="_blank" >$val[title]</a></h2>
+			<p>$val[descrip]<a href="$val[url]"  target="_blank" >[详情]</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			<div class="c"></div>
+			<div class="subjectWrap cc">
+				<div class="view-hover" invokename="D3_中间图文列表@亲子" altname="D3_中间图文列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('D3_中间图文列表@亲子','左边图片X1');
+print <<<EOT
+<div class="fl subject2">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" ><img src="$val[image]" width="75" height="70" /></a>
+EOT;
+}
+$pwresult = pwTplGetData('D3_中间图文列表@亲子','左边标题列表X4');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+</div>
+EOT;
+$pwresult = pwTplGetData('D3_中间图文列表@亲子','右边边图片X1');
+print <<<EOT
+<div class="fr subject2">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<a href="$val[url]"  target="_blank" ><img src="$val[image]" width="75" height="70" /></a>
+EOT;
+}
+$pwresult = pwTplGetData('D3_中间图文列表@亲子','右边标题列表X4');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+</div>
+
+
+
+
+</div>
+			</div>
+		</div>
+		<div class="fr w195">
+		<h4>盖楼宝宝</h4>
+			<div class="view-hover" invokename="D4_右侧图文@亲子" altname="D4_右侧图文@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('D4_右侧图文@亲子','图文列表X4');
+print <<<EOT
+<ul class="subject3">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="45" height="40"  /></a>$val[descrip]</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+<div id="preschool" class="panel2 mt10">
+	<div class="view-hover" invokename="E1_栏目导航@亲子" altname="E1_栏目导航@亲子" channelid="baby"><h1 class="caption">学龄前 [3岁-6岁]</h1>
+<div class="hd">
+	<h3>亲子俱乐部申请通道</h3>
+	<ul class="more">
+		<li><em>学龄前：</em><a href="#">培养</a>｜<a href="#">艺术</a>｜<a href="#">兴趣班</a>｜<a href="#">幼儿园</a></li>
+	</ul>
+</div>
+
+
+
+
+</div>
+	<div class="bd">
+		<div class="fl w525">
+			<div class="view-hover" invokename="E2_中间图文摘要@亲子" altname="E2_中间图文摘要@亲子" channelid="baby"><div class="pwSlideWrap">
+	<div id="pwSlide3" class="pwSlide">
+EOT;
+$pwresult = pwTplGetData('E2_中间图文摘要@亲子','左边图片X1');
+print <<<EOT
+<ul class="switch">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="235" height="150" />
+				<h3>$val[title]</h3>
+				</a></li>
+EOT;
+}print <<<EOT
+</ul>
+		<div class="pwSlide-bg" style="background-color:#603"></div>
+	</div>
+</div>
+EOT;
+$pwresult = pwTplGetData('E2_中间图文摘要@亲子','左侧标题摘要X2');
+print <<<EOT
+<ul class="tops">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li>
+			<h2><a href="$val[url]"  target="_blank" >$val[title]</a></h2>
+			<p>$val[descrip]<a href="$val[url]"  target="_blank" >[详情]</a></p>
+		</li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			<div class="c"></div>
+			<div class="subjectWrap cc">
+				<div class="view-hover" invokename="E3_中间图文列表@亲子" altname="E3_中间图文列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('E3_中间图文列表@亲子','左侧图片X3');
+print <<<EOT
+<ul class="imgList">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" ><img src="$val[image]" width="70" height="65" />$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+EOT;
+$pwresult = pwTplGetData('E3_中间图文列表@亲子','右侧标题列表X4');
+print <<<EOT
+<ul class="list5">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ul>
+
+
+
+
+</div>
+			</div>
+		</div>
+		<div class="fr w195">
+		<h4>好孕在线课堂</h4>
+			<div class="view-hover" invokename="E4_右侧列表@亲子" altname="E4_右侧列表@亲子" channelid="baby">
+EOT;
+$pwresult = pwTplGetData('E4_右侧列表@亲子','标题列表X8');
+print <<<EOT
+<ol class="rankingList r2">
+EOT;
+foreach($pwresult as $key=>$val){print <<<EOT
+<li><a href="$val[url]"  target="_blank" >$val[title]</a></li>
+EOT;
+}print <<<EOT
+</ol>
+</div>
+		</div>
+	</div>
+</div>
+EOT;
+require modeEot('footer');
+print <<<EOT
+<!--
+EOT;
+?>-->
